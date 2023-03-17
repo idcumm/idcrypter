@@ -1,7 +1,7 @@
 # idcrypter
 Encrypter / Decrypter xd
 
-Necesitas tener python instalado
+Necesitas tener python instalado\n
 La versión más recomendable: v3.9.5
 
 https://www.python.org/downloads/release/python-395/
