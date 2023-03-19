@@ -11,4 +11,4 @@ Soy maricon
 
 lezduit#8218
 
-v1.0
+v1.1
