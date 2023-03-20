@@ -20,7 +20,7 @@ print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
                              j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
                             |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j
 
-                                                            
+
 """, 1)))
 
 spacing = '                                                 '
@@ -78,11 +78,11 @@ def __main__():
 
     {Colors.yellow}[{Colors.white}7{Colors.yellow}] {Colors.white}Texto al revés                       {Colors.yellow}[{Colors.white}8{Colors.yellow}] {Colors.white}Base 64 (codificar)           {Colors.yellow}[{Colors.white}9{Colors.yellow}] {Colors.white}Base 64 (descodificar)
 
-    {Colors.yellow}[{Colors.white}10{Colors.yellow}] {Colors.red}*{Colors.white}Cifrado César{Colors.red}*                     {Colors.yellow}[{Colors.white}11{Colors.yellow}] {Colors.white}Encriptación DES             {Colors.yellow}[{Colors.white}12{Colors.yellow}] {Colors.white}Entidades HTML (codificar)
+    {Colors.yellow}[{Colors.white}10{Colors.yellow}] {Colors.red}*{Colors.white}Cifrado César{Colors.red}*                     {Colors.yellow}[{Colors.white}11{Colors.yellow}] {Colors.light_gray}Encriptación DES             {Colors.yellow}[{Colors.white}12{Colors.yellow}] {Colors.white}Entidades HTML (codificar)
 
     {Colors.yellow}[{Colors.white}13{Colors.yellow}] {Colors.white}Entidades HTML (descodificar)       {Colors.yellow}[{Colors.white}14{Colors.yellow}] {Colors.white}Texto a l33t 5p34k           {Colors.yellow}[{Colors.white}15{Colors.yellow}] {Colors.white}l33t 5p34k a Texto
 
-    {Colors.yellow}[{Colors.white}16{Colors.yellow}] {Colors.white}Encriptación MD5                    {Colors.yellow}[{Colors.white}17{Colors.yellow}] {Colors.white}Texto a Pig Latin            {Colors.yellow}[{Colors.white}18{Colors.yellow}] {Colors.white}Pig Latin a Texto
+    {Colors.yellow}[{Colors.white}16{Colors.yellow}] {Colors.light_gray}Encriptación MD5                    {Colors.yellow}[{Colors.white}17{Colors.yellow}] {Colors.white}Texto a Pig Latin            {Colors.yellow}[{Colors.white}18{Colors.yellow}] {Colors.white}Pig Latin a Texto
 
     {Colors.yellow}[{Colors.white}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.white}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.white}21{Colors.yellow}] {Colors.white}Descodificar URL
 
@@ -111,10 +111,16 @@ def __main__():
             except IndexError:
                 Write.Print('    Porvafor, escriba un mensaje válido.', Colors.light_gray, interval=0.01)
                 sleep(0.5)
-        Write.Print(f"""
-        {after_keyword}
-    
-        """, Colors.yellow, interval=0.008)
+        if len(after_keyword) > 200:
+           print(Colors.yellow, f"""
+            {after_keyword}
+        
+            """)
+        else:
+            Write.Print(f"""
+            {after_keyword}
+        
+            """, Colors.yellow, interval=0.001)
 
     Write.Input('    Pulsa cualquier tecla para continuar: ', Colors.light_gray, interval=0.01)
 
