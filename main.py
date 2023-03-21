@@ -1,16 +1,4 @@
-import requests, os, sys, ctypes
-from bs4 import BeautifulSoup
-from time import sleep
-from pystyle import Colors, Colorate, Write, Center
-
-def setTitle(_str):
-    system = os.name
-    if system == 'nt':
-        ctypes.windll.kernel32.SetConsoleTitleW(f"{_str} - Made By idcum")
-    elif system == 'posix':
-        sys.stdout.write(f"\x1b]0;{_str} - Made By idcum\x07")
-    else:
-        pass
+from assets.plugins import *
 
 os.system('@echo off')
 setTitle('Erección Espontanea')
@@ -31,44 +19,7 @@ print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
 
 """, 1)))
 
-spacing = '                                                 '
-lenght = 18
-position = 1
-help2 = False
-help = False
-
-print(Colors.gray, f'\r{spacing}|░░░░░░░░░░░░░░░░░░░|',end='')
-print(Colors.gray, f'\r{spacing}|▌░░░░░░░░░░░░░░░░░░|',end='')
-
-while position <= lenght + 1:
-    message = ''
-    b = 0
-
-    while b < position:
-        if help == True and b == position - 1:
-            message += '▌'
-
-            help = False
-            position -= 1
-        elif help == False and b == position - 1:
-            message += '█'
-
-            help = True
-            help2 = True
-        else:
-            message += '█'
-
-        b = b + 1
-
-    if help2 == True and not position > lenght:
-        message += '░'
-        help2 = False
-
-    for i in range(lenght - position):
-        message += '░'
-    position += 1
-    sleep(0.02)
-    print(Colors.gray, f'\r{spacing}|{message}|',end='')
+progress_bar(30, 0, 0.03)
 
 url = 'https://superpatanegra.com/texto/index.php'
 
@@ -121,9 +72,11 @@ def __main__():
             """)
             sleep(0.5)
 
-    if number == 9 or number > 20 or number < 0:
+    if number == 9 or number > 20 or number < -1:
         Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
         print()
+    elif number == -1:
+        config()
     else:
         while True:
             try:
