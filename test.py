@@ -1,6 +1,6 @@
 from time import sleep
 
-len = 50
+len = 30
 pos = 0
 for i in range(len + 1):
     num = 0
