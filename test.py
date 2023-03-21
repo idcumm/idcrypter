@@ -1,8 +1,7 @@
 from time import sleep
 
-message = ''
 len = 50
-pos=0
+pos = 0
 for i in range(len + 1):
     num = 0
     message = ''
@@ -14,4 +13,4 @@ for i in range(len + 1):
     pos+= 1
     print(f'\r|{message}|', end='')
     sleep(0.02)
-input()
+print(' Done!')
