@@ -37,6 +37,7 @@ def __main__():
         Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
         print()
     elif number == -1:
+        clear()
         config()
     else:
         while True:

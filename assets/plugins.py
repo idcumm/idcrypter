@@ -35,19 +35,6 @@ def clear():
         print('\n'*120)
     return
 
-def config():
-    system = os.name
-    if system == 'nt':
-        os.system('cls')
-    elif system == 'posix':
-        os.system('clear')
-    else:
-        pass
-
-    print("""
-                [1] Change Theme
-    """)
-
 def idcrypter():
     print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """\n\n\n\n\n
                              ____  ___      __  ____   __ __  ____  ______    ___  ____  
@@ -67,3 +54,6 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Encriptación MD5                    {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Texto a Pig Latin            {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Pig Latin a Texto
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Descodificar URL
 \n\n\t\t\t\t\t\t\t\t\t\t\t\t {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}] {Colors.white}Configuración\n"""))
+
+def config():
+    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Test"""))
