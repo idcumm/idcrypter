@@ -6,6 +6,7 @@ progress_bar(30, 0, 0.03)
 
 url = 'https://superpatanegra.com/texto/index.php'
 enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'bin2hex', 'hex2bin', 'backwards', 'b64enc', 'b64dec', 'caesarbf', 'crypt', 'entityenc', 'entitydec', 'l33t', 'del33t', 'md5', 'igpay', 'unigpay', 'rot-13', 'urlenc', 'urldec']
+after_keyword = ''
 
 while True:
     try:
@@ -19,9 +20,9 @@ while True:
         Write.Print('    >> [404] Error de conexión. Reintentando Conexión en 10 segundos...', Colors.red, interval=0.01)
         sleep(10)
 
+clear()
+enc_options()
 def __main__():
-    clear()
-    enc_options()
     while True:
         try:
             number = int(Write.Input("    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
@@ -43,6 +44,9 @@ def __main__():
         while True:
             try:
                 text = Write.Input('    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                if text == '':
+                    global after_keyword
+                    text = after_keyword
                 r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})       
                 soup = BeautifulSoup(r.text, features='html.parser')
                 data = [item.text for item in soup.select('p')]
@@ -63,6 +67,10 @@ def __main__():
 
     print()
     Write.Input('    >> Pulsa cualquier tecla para continuar: ', Colors.light_gray, interval=0.01)
+    print()
+    
+    clear()
+    enc_options()
 
 while True:
     __main__()
