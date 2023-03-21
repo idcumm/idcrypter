@@ -1,9 +1,9 @@
 from time import sleep
 
 
-len = 30
-pos = 0
-for i in range(len + 1):
+len = 100
+pos = 50
+for i in range(len + 1 - pos):
     num = 0
     message = ''
     while num < pos:
