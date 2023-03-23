@@ -39,7 +39,8 @@ def __main__():
         print()
     elif number == -1:
         clear()
-        config()
+        config_options()
+        config_main()
     else:
         while True:
             try:

@@ -55,5 +55,24 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Descodificar URL
 \n\n\t\t\t\t\t\t\t\t\t\t\t\t {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}] {Colors.white}Configuración\n"""))
 
-def config():
-    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Test"""))
+def config_options():
+    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Binario a Texto               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Texto a Hexadecimal
+    \n\n"""))
+
+def config_main():
+    while True:
+        try:
+            opt_number = int(Write.Input("    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
+            print()
+            break
+        except (TypeError, ValueError):
+            print()
+            Write.Print('    >> Porvafor, escriba un número válido.', Colors.light_red, interval=0.01)
+            print('\n')
+            sleep(0.5)
+    if opt_number > 2 or opt_number < -1:
+        Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
+        print()
+    elif opt_number == 0:
+        Write.Print('    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
+        
