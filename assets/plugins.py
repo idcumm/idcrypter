@@ -62,7 +62,7 @@ def config_options():
 def config_main():
     while True:
         try:
-            opt_number = int(Write.Input("    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
+            number = int(Write.Input("    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
             print()
             break
         except (TypeError, ValueError):
@@ -70,9 +70,10 @@ def config_main():
             Write.Print('    >> Porvafor, escriba un número válido.', Colors.light_red, interval=0.01)
             print('\n')
             sleep(0.5)
-    if opt_number > 2 or opt_number < -1:
+    if number > 2 or number < -1:
         Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
         print()
-    elif opt_number == 0:
+    elif number == 0:
         Write.Print('    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
+        print()
         
