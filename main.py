@@ -34,7 +34,27 @@ def __main__():
             print('\n')
             sleep(0.5)
 
-    if number == 9 or number > 20 or number < -1:
+    if number == 9:
+        while True:
+            try:
+                text = Write.Input('    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                if text == '':
+                    global after_keyword
+                    text = after_keyword
+                r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})       
+                soup = BeautifulSoup(r.text, features='html.parser')
+                data = [item.text for item in soup.select('td')]
+                break
+            except IndexError:
+                print()
+                print(data)
+                Write.Print('    >> Porvafor, escriba un mensaje válido.', Colors.light_red, interval=0.01)
+                print('\n')
+                sleep(0.5)
+            print(Colors.yellow, f"""
+            {data}
+            """)
+    elif number > 20 or number < -1:
         Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
         print()
     elif number == -1:
@@ -46,7 +66,6 @@ def __main__():
             try:
                 text = Write.Input('    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
                 if text == '':
-                    global after_keyword
                     text = after_keyword
                 r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})       
                 soup = BeautifulSoup(r.text, features='html.parser')
