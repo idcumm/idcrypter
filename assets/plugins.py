@@ -2,7 +2,6 @@ import requests, os, sys, ctypes
 from bs4 import BeautifulSoup
 from time import sleep
 from pystyle import Colors, Colorate, Write, Center
-from colorama import Fore
 
 def progress_bar(len, pos, interval):
     space = '\t\t\t\t\t  '
