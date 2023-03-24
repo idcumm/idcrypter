@@ -37,6 +37,7 @@ def __main__():
         while True:
             try:
                 text = Write.Input('    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
                 if text == '':
                     text = after_keyword
                 r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})       
@@ -44,22 +45,20 @@ def __main__():
                 data = [item.text for item in soup.select('td')]
                 keyword = ': '
                 before_keyword, keyword, after_keyword = data[1].partition(keyword)
+                print()
                 break
             except IndexError:
-                print()
                 Write.Print('    >> Porvafor, escriba un mensaje válido.', Colors.light_red, interval=0.01)
                 print('\n')
                 sleep(0.5)
-        print()
         for i in range(len(data)):
             keyword = ': '
             before_keyword, keyword, after_keyword = data[i].partition(keyword)
-            print(Colors.yellow, f'{after_keyword}')
+            print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
         print()
     elif number > 20 or number < -1:
-        print()
         Write.Print('    >> Porvafor, escriba un número válido.', Colors.light_red, interval=0.01)
-        print('\n')
+        print()
         sleep(0.5)
     elif number == -1:
         clear()
@@ -69,6 +68,7 @@ def __main__():
         while True:
             try:
                 text = Write.Input('    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
                 if text == '':
                     text = after_keyword
                 r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})       
@@ -78,7 +78,6 @@ def __main__():
                 before_keyword, keyword, after_keyword = data[1].partition(keyword)
                 break
             except IndexError:
-                print()
                 Write.Print('    >> Porvafor, escriba un mensaje válido.', Colors.light_red, interval=0.01)
                 print('\n')
                 sleep(0.5)
@@ -91,8 +90,6 @@ def __main__():
 
     print()
     Write.Input('    >> Pulsa cualquier tecla para continuar: ', Colors.light_gray, interval=0.01)
-    print()
-    
     clear()
     enc_options()
 
