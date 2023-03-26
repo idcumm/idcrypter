@@ -35,7 +35,6 @@ while True:
         print(Colors.red,
               f'   >> [404] Error de conexión con {url}. Reintentando Conexión en 10 segundos...')
         sleep(10)
-
 clear()
 setTitle('idcrypter')
 idcrypter()
@@ -50,7 +49,6 @@ def __main__():
     except (TypeError, ValueError):
         number = 1000
         print()
-
     global after_keyword
     if number == 9:
         while True:
@@ -120,7 +118,6 @@ def __main__():
                     Colors.light_red, interval=0.01)
         print()
         sleep(0.5)
-
     clear()
     idcrypter()
     enc_options()
