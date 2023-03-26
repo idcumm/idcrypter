@@ -10,21 +10,19 @@ enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'bin2hex', 'hex2bin', '
              'caesarbf', 'crypt', 'entityenc', 'entitydec', 'l33t', 'del33t', 'md5', 'igpay', 'unigpay', 'rot-13', 'urlenc', 'urldec']
 after_keyword = ''
 
-print('\n')
-Write.Print(f'    >> Intentando establecer la conexión con el servidor...',
-            Colors.white, interval=0.01)
+print(Colors.white, f'\n\n    >> Intentando establecer la conexión con el servidor...')
 while True:
     try:
         requests.get(url)
-        print()
-        Write.Print(
-            f'    >> [{requests.get(url).status_code}] Conexión establecida.', Colors.green, interval=0.01)
-        sleep(1)
+        print(Colors.green,
+              f'   >> [{requests.get(url).status_code}] Conexión con "{url}" establecida.')
+        requests.get(url2)
+        print(Colors.green,
+              f'   >> [{requests.get(url2).status_code}] Conexión con "{url2}" establecida.')
         break
     except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
-        print('\n')
-        Write.Print(
-            '    >> [404] Error de conexión. Reintentando Conexión en 10 segundos...', Colors.red, interval=0.01)
+        print(Colors.red,
+              '   >> [404] Error de conexión. Reintentando Conexión en 10 segundos...')
         sleep(10)
 
 clear()
