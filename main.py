@@ -115,9 +115,6 @@ def __main__():
                         """, Colors.yellow, interval=0.001)
         Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                     Colors.light_gray, interval=0.01)
-    else:
-        Write.Print('    >> Porvafor, escriba un número válido.',
-                    Colors.light_red, interval=0.01)
         print()
         sleep(0.5)
     clear()
