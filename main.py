@@ -3,7 +3,7 @@
 
 from assets.plugins import *
 
-setTitle('Erección Espontanea')
+setTitle('Loading...')
 idcrypter()
 progress_bar(30, 0, 0.03)
 
@@ -29,6 +29,8 @@ while True:
         sleep(10)
 
 clear()
+setTitle('idcrypter')
+idcrypter()
 enc_options()
 
 
@@ -112,6 +114,7 @@ def __main__():
         sleep(0.5)
 
     clear()
+    idcrypter()
     enc_options()
 
 

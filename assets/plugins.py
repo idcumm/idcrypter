@@ -42,7 +42,7 @@ def clear():
 
 
 def idcrypter():
-    print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """\n\n\n\n\n
+    print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
                              ____  ___      __  ____   __ __  ____  ______    ___  ____  
                             l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
                              |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
