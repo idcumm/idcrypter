@@ -1,6 +1,8 @@
-# Fer encriptacion AES
+# afegir encriptacions (AES)
+# modificar encriptacio DES i MD5
 # Fer menu igual que ATIO
-# Fer opcio de diferents numeros en una eleccion
+# Fer opcio de diferents numeros en una eleccion#
+# cambiar espais per tabuladors
 
 from assets.plugins import *
 
