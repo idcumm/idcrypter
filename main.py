@@ -45,78 +45,80 @@ enc_options()
 
 def __main__():
     try:
-        number = int(Write.Input(
-            "    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
+        number = Write.Input(
+            "    >> [#] Elección: ", Colors.light_gray, interval=0.01) - 1
         print()
-    except (TypeError, ValueError):
+    except (TypeError):
         number = 1000
         print()
     global after_keyword
-    if number == 9:
-        while True:
-            try:
-                text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                print()
-                if text == '':
-                    text = after_keyword
-                r = requests.post(
-                    url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
-                soup = BeautifulSoup(r.text, features='html.parser')
-                data = [item.text for item in soup.select('td')]
+    if number >= -1 and number <= 20:
+        if number == -1:
+            clear()
+            config_options()
+            config_main()
+        elif number == 9:
+            while True:
+                try:
+                    text = Write.Input(
+                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                    print()
+                    if text == '':
+                        text = after_keyword
+                    r = requests.post(
+                        url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
+                    soup = BeautifulSoup(r.text, features='html.parser')
+                    data = [item.text for item in soup.select('td')]
+                    keyword = ': '
+                    before_keyword, keyword, after_keyword = data[1].partition(
+                        keyword)
+                    print()
+                    break
+                except IndexError:
+                    Write.Print('    >> Porvafor, escriba un mensaje válido.',
+                                Colors.light_red, interval=0.01)
+                    print('\n')
+                    sleep(0.5)
+            for i in range(len(data)):
                 keyword = ': '
-                before_keyword, keyword, after_keyword = data[1].partition(
+                before_keyword, keyword, after_keyword = data[i].partition(
                     keyword)
-                print()
-                break
-            except IndexError:
-                Write.Print('    >> Porvafor, escriba un mensaje válido.',
-                            Colors.light_red, interval=0.01)
-                print('\n')
-                sleep(0.5)
-        for i in range(len(data)):
-            keyword = ': '
-            before_keyword, keyword, after_keyword = data[i].partition(keyword)
-            print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
-        print()
-        print()
-        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                    Colors.light_gray, interval=0.01)
-    elif number == -1:
-        clear()
-        config_options()
-        config_main()
-    elif number < 21 and number > -1:
-        while True:
-            try:
-                text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                print()
-                if text == '':
-                    text = after_keyword
-                r = requests.post(
-                    url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
-                soup = BeautifulSoup(r.text, features='html.parser')
-                data = [item.text for item in soup.select('p')]
-                keyword = 'TEXTO PROCESADO:'
-                before_keyword, keyword, after_keyword = data[1].partition(
-                    keyword)
-                break
-            except IndexError:
-                Write.Print('    >> Porvafor, escriba un mensaje válido.',
-                            Colors.light_red, interval=0.01)
-                print('\n')
-                sleep(0.5)
-        if len(after_keyword) > 200:
-            print(Colors.yellow, f'\n{after_keyword}\n\n')
-        else:
-            Write.Print(f"""
-                        {after_keyword}
-                        """, Colors.yellow, interval=0.001)
-        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                    Colors.light_gray, interval=0.01)
-        print()
-        sleep(0.5)
+                print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+            print()
+            print()
+            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                        Colors.light_gray, interval=0.01)
+        elif number < 21 and number > -1:
+            while True:
+                try:
+                    text = Write.Input(
+                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                    print()
+                    if text == '':
+                        text = after_keyword
+                    r = requests.post(
+                        url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
+                    soup = BeautifulSoup(r.text, features='html.parser')
+                    data = [item.text for item in soup.select('p')]
+                    keyword = 'TEXTO PROCESADO:'
+                    before_keyword, keyword, after_keyword = data[1].partition(
+                        keyword)
+                    break
+                except IndexError:
+                    Write.Print('    >> Porvafor, escriba un mensaje válido.',
+                                Colors.light_red, interval=0.01)
+                    print('\n')
+                    sleep(0.5)
+            if len(after_keyword) > 200:
+                print(Colors.yellow, f'\n{after_keyword}\n\n')
+            else:
+                Write.Print(f"""
+                            {after_keyword}
+                            """, Colors.yellow, interval=0.001)
+            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                        Colors.light_gray, interval=0.01)
+            print()
+            sleep(0.5)
     clear()
     idcrypter()
     enc_options()
