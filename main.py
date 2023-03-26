@@ -117,9 +117,9 @@ def __main__():
                     print('\n')
                     sleep(0.5)
             if len(after_keyword) > 200:
-                print(Colors.yellow, f'\n{after_keyword}\n\n')
+                print(Colors.yellow, f'\n    {after_keyword}\n\n')
             else:
-                Write.Print(f"""{after_keyword}
+                Write.Print(f"""    {after_keyword}
                             """, Colors.yellow, interval=0.001)
             print()
             Write.Input('    >> Pulsa cualquier tecla para continuar: ',
