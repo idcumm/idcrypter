@@ -1,3 +1,6 @@
+# Fer encriptacion AES
+# Fer menu igual que ATIO
+
 from assets.plugins import *
 
 setTitle('Erección Espontanea')
@@ -66,6 +69,9 @@ def __main__():
             before_keyword, keyword, after_keyword = data[i].partition(keyword)
             print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
         print()
+        print()
+        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                    Colors.light_gray, interval=0.01)
     elif number == -1:
         clear()
         config_options()
@@ -97,15 +103,14 @@ def __main__():
             Write.Print(f"""
                         {after_keyword}
                         """, Colors.yellow, interval=0.001)
+        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                    Colors.light_gray, interval=0.01)
     else:
         Write.Print('    >> Porvafor, escriba un número válido.',
                     Colors.light_red, interval=0.01)
         print()
         sleep(0.5)
 
-    print()
-    Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                Colors.light_gray, interval=0.01)
     clear()
     enc_options()
 
