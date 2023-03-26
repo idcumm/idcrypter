@@ -44,26 +44,23 @@ enc_options()
 
 
 def __main__():
+    number = Write.Input(
+        "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
     try:
-        number = Write.Input(
-            "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
-        try:
-            number = int(number) - 1
-        except (TypeError, ValueError):
-            number = str(number)
-        print()
-    except (TypeError):
-        number = 1000
-        print()
+        number = int(number) - 1
+    except (TypeError, ValueError):
+        number = str(number)
+    print()
     global after_keyword
-    if number == '>' or number == '<' or number >= -1 and number <= 20:
+    if type(number) == str:
         if number == '>':
             print(True)
             sleep(0.5)
         elif number == '<':
             print(True)
             sleep(0.5)
-        elif number == -1:
+    if type(number) == int:
+        if number == -1:
             clear()
             config_options()
             config_main()
