@@ -1,5 +1,6 @@
 # Fer encriptacion AES
 # Fer menu igual que ATIO
+# Fer opcio de diferents numeros en una eleccion
 
 from assets.plugins import *
 
@@ -19,13 +20,20 @@ while True:
         requests.get(url)
         print(Colors.green,
               f'   >> [{requests.get(url).status_code}] Conexión con "{url}" establecida.')
-        requests.get(url2)
-        print(Colors.green,
-              f'   >> [{requests.get(url2).status_code}] Conexión con "{url2}" establecida.')
+        while True:
+            try:
+                requests.get(url2)
+                print(Colors.green,
+                      f'   >> [{requests.get(url2).status_code}] Conexión con "{url2}" establecida.')
+                break
+            except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
+                print(Colors.red,
+                      f'   >> [404] Error de conexión con {url2}. Reintentando Conexión en 10 segundos...')
+                sleep(10)
         break
     except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
         print(Colors.red,
-              '   >> [404] Error de conexión. Reintentando Conexión en 10 segundos...')
+              f'   >> [404] Error de conexión con {url}. Reintentando Conexión en 10 segundos...')
         sleep(10)
 
 clear()
