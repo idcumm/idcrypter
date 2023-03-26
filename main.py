@@ -46,14 +46,24 @@ enc_options()
 def __main__():
     try:
         number = Write.Input(
-            "    >> [#] Elección: ", Colors.light_gray, interval=0.01) - 1
+            "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
+        try:
+            number = int(number) - 1
+        except (TypeError, ValueError):
+            number = str(number)
         print()
     except (TypeError):
         number = 1000
         print()
     global after_keyword
-    if number >= -1 and number <= 20:
-        if number == -1:
+    if number == '>' or number == '<' or number >= -1 and number <= 20:
+        if number == '>':
+            print(True)
+            sleep(0.5)
+        elif number == '<':
+            print(True)
+            sleep(0.5)
+        elif number == -1:
             clear()
             config_options()
             config_main()
@@ -88,12 +98,12 @@ def __main__():
             print()
             Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                         Colors.light_gray, interval=0.01)
-        elif number < 21 and number > -1:
+        elif number <= 20 and number >= 0:
             while True:
                 try:
                     text = Write.Input(
                         '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                    print()
+                    print('')
                     if text == '':
                         text = after_keyword
                     r = requests.post(
@@ -112,12 +122,11 @@ def __main__():
             if len(after_keyword) > 200:
                 print(Colors.yellow, f'\n{after_keyword}\n\n')
             else:
-                Write.Print(f"""
-                            {after_keyword}
+                Write.Print(f"""{after_keyword}
                             """, Colors.yellow, interval=0.001)
+            print()
             Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                         Colors.light_gray, interval=0.01)
-            print()
             sleep(0.5)
     clear()
     idcrypter()
