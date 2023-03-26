@@ -8,6 +8,7 @@ from pystyle import Colors, Colorate, Write, Center
 
 
 def progress_bar(len, pos, interval):
+    print('\n')
     space = '\t\t\t\t\t  '
     for i in range(len - pos + 1):
         message = ''
