@@ -1,7 +1,11 @@
-import requests, os, sys, ctypes
+import requests
+import os
+import sys
+import ctypes
 from bs4 import BeautifulSoup
 from time import sleep
 from pystyle import Colors, Colorate, Write, Center
+
 
 def progress_bar(len, pos, interval):
     space = '\t\t\t\t\t  '
@@ -11,9 +15,10 @@ def progress_bar(len, pos, interval):
             message += '█'
         for i in range(len - pos):
             message += '░'
-        pos+= 1
+        pos += 1
         print(Colors.gray, f'\r{space}|{message}|', end='')
         sleep(interval)
+
 
 def setTitle(_str):
     system = os.name
@@ -23,6 +28,7 @@ def setTitle(_str):
         sys.stdout.write(f"\x1b]0;{_str} - Made By idcum\x07")
     else:
         pass
+
 
 def clear():
     system = os.name
@@ -34,6 +40,7 @@ def clear():
         print('\n'*120)
     return
 
+
 def idcrypter():
     print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """\n\n\n\n\n
                              ____  ___      __  ____   __ __  ____  ______    ___  ____  
@@ -43,7 +50,8 @@ def idcrypter():
                              |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
                              j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
                             |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n\n""", 1)))
-    
+
+
 def enc_options():
     print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Texto a Binario                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Binario a Texto               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Texto a Hexadecimal
 \n    {Colors.yellow}[{Colors.light_gray}4{Colors.yellow}] {Colors.white}Hexadecimal a Texto                  {Colors.yellow}[{Colors.light_gray}5{Colors.yellow}] {Colors.white}Binario a Hexadecimal         {Colors.yellow}[{Colors.light_gray}6{Colors.yellow}] {Colors.white}Hexadecimal a Binario
@@ -54,24 +62,29 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Descodificar URL
 \n\n\t\t\t\t\t\t\t\t\t\t\t\t {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}] {Colors.white}Configuración\n"""))
 
+
 def config_options():
     print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
     \n\n"""))
 
+
 def config_main():
     while True:
         try:
-            opt_number = int(Write.Input("    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
+            opt_number = int(Write.Input(
+                "    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
             print()
             break
         except (TypeError, ValueError):
             print()
-            Write.Print('    >> Porvafor, escriba un número válido.', Colors.light_red, interval=0.01)
+            Write.Print('    >> Porvafor, escriba un número válido.',
+                        Colors.light_red, interval=0.01)
             print('\n')
             sleep(0.5)
     if opt_number > 2 or opt_number < -1:
-        Write.Print('    >> En desarrollo... ', Colors.light_red, interval=0.01)
+        Write.Print('    >> En desarrollo... ',
+                    Colors.light_red, interval=0.01)
         print()
     elif opt_number == 0:
-        Write.Print('    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
-        
+        Write.Print(
+            '    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
