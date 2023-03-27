@@ -115,7 +115,7 @@ def enc_options2():
 
 def config_options():
     print(Center.XCenter(f"""
-    \n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Temas                               {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                         {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
+    \n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                     {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                         {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
     \n
     \n
     \n
