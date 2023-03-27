@@ -66,6 +66,19 @@ def enc_options():
 \n"""))
 
 
+def enc_options2():
+    print(Center.XCenter(f"""
+\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}AES                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Triple DES               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n"""))
+
+
 def config_options():
     print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
     \n\n"""))

@@ -15,6 +15,7 @@ url2 = 'https://cifraronline.com/descifrar-aes'
 enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'bin2hex', 'hex2bin', 'backwards', 'b64enc', 'b64dec',
              'caesarbf', 'crypt', 'entityenc', 'entitydec', 'l33t', 'del33t', 'md5', 'igpay', 'unigpay', 'rot-13', 'urlenc', 'urldec']
 after_keyword = ''
+page = 1
 
 print(Colors.white, f'\n\n    >> Intentando establecer la conexión con el servidor...')
 while True:
@@ -44,6 +45,8 @@ enc_options()
 
 
 def __main__():
+    global after_keyword
+    global page
     number = Write.Input(
         "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
     try:
@@ -51,14 +54,11 @@ def __main__():
     except (TypeError, ValueError):
         number = str(number)
     print()
-    global after_keyword
     if type(number) == str:
         if number == '>':
-            print(True)
-            sleep(0.5)
+            idcrypter()
         elif number == '<':
-            print(True)
-            sleep(0.5)
+            idcrypter()
     if type(number) == int:
         if number == -1:
             clear()
