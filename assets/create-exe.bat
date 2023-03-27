@@ -1,4 +1,4 @@
 @echo off
 cd ..
-pyinstaller --onefile --clean -i icon.ico main.py
+pyinstaller --clean --onefile -i icon.ico main.py
 pause
