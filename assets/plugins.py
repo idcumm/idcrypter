@@ -109,7 +109,7 @@ def enc_options2():
 \n
 \n
 \n
-\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.green}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.green}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.green}Siguiente Página
+\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n\n"""))
 
 
