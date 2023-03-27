@@ -6,6 +6,20 @@ from bs4 import BeautifulSoup
 from time import sleep
 from pystyle import Colors, Colorate, Write, Center
 
+color_shade = 'yellow_to_red'
+number = 0
+
+
+def eleccion():
+    global number
+    number = Write.Input(
+        "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
+    try:
+        number = int(number) - 1
+    except (TypeError, ValueError):
+        number = str(number)
+    print()
+
 
 def progress_bar(len, pos, interval):
     print('\n')
@@ -43,14 +57,25 @@ def clear():
 
 
 def idcrypter():
-    print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
-                             ____  ___      __  ____   __ __  ____  ______    ___  ____  
-                            l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
-                             |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
-                             |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
-                             |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
-                             j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                            |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
+    global color_shade
+    if color_shade == 'yellow_to_red':
+        print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
+                                 ____  ___      __  ____   __ __  ____  ______    ___  ____  
+                                l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
+                                 |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
+                                 |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
+                                 |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
+                                 j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
+                                |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
+    elif color_shade == 'purple_to_blue':
+        print(Center.XCenter(Colorate.Vertical(Colors.purple_to_blue, """
+                                 ____  ___      __  ____   __ __  ____  ______    ___  ____  
+                                l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
+                                 |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
+                                 |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
+                                 |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
+                                 j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
+                                |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
 
 
 def enc_options():
@@ -93,22 +118,12 @@ def config_options():
 
 
 def config_main():
-    while True:
-        try:
-            number = int(Write.Input(
-                "    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
-            print()
-            break
-        except (TypeError, ValueError):
-            print()
-            Write.Print('    >> Porvafor, escriba un número válido.',
-                        Colors.light_red, interval=0.01)
-            print('\n')
-            sleep(0.5)
-    if number > 2 or number < -1 or number == 1:
-        Write.Print('    >> En desarrollo... ',
-                    Colors.light_red, interval=0.01)
-        print()
-    elif number == 0:
+    global color_shade
+    eleccion()
+    if number == 0:
         Write.Print(
-            '    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
+            '    >> Temas: [1] Neon, [2] Sunset, [3] White', Colors.light_red, interval=0.01)
+        print('\n')
+        eleccion()
+        if number == 0:
+            color_shade = 'purple_to_blue'
