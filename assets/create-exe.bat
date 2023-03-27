@@ -1,9 +1,7 @@
 @echo off
 pyinstaller --clean --onefile -i icon.ico main.py
-cd ..
 rmdir build /s /q
 del main.spec /q
-cd dist
-move /y main.exe ..
-cd ..
+move /y dist\main.exe ..
 rmdir dist /s /q
+rmdir __pycache__ /s /q
