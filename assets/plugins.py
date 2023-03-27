@@ -80,14 +80,14 @@ def enc_options2():
 
 
 def config_options():
-    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
+    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Salir
     \n\n"""))
 
 
 def config_main():
     while True:
         try:
-            opt_number = int(Write.Input(
+            number = int(Write.Input(
                 "    >> [#] Elección: ", Colors.light_gray, interval=0.01)) - 1
             print()
             break
@@ -97,10 +97,10 @@ def config_main():
                         Colors.light_red, interval=0.01)
             print('\n')
             sleep(0.5)
-    if opt_number > 2 or opt_number < -1:
+    if number > 2 or number < -1 or number == 1:
         Write.Print('    >> En desarrollo... ',
                     Colors.light_red, interval=0.01)
         print()
-    elif opt_number == 0:
+    elif number == 0:
         Write.Print(
             '    >> Temas: [0] Neon, [1] Sunset, [2] White', Colors.light_red, interval=0.01)
