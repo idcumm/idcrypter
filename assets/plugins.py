@@ -96,7 +96,7 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Entidades HTML (descodificar)       {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}Texto a l33t 5p34k           {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}l33t 5p34k a Texto
 \n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.light_red}Encriptación MD5                    {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Texto a Pig Latin            {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Pig Latin a Texto
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Descodificar URL
-\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.green}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.green}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.green}Siguiente Página
+\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n\n"""))
 
 
@@ -131,7 +131,7 @@ def config_main():
     eleccion()
     if number == 0:
         Write.Print(
-            '    >> Temas: [1] Sunset', Colors.orange, interval=0.01)
+            '    >>        [1] Sunset', Colors.orange, interval=0.01)
         print()
         Write.Print(
             '              [2] Electricity', Colors.purple, interval=0.01)

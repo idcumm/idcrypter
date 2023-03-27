@@ -1,8 +1,7 @@
 # afegir encriptacions
 # # ordenar encriptaions
 # modificar encriptacio DES i MD5
-# Fer opcio de diferents numeros en una eleccion#
-# Alinear configuracion
+# Fer opcio de diferents numeros en una eleccion
 
 from assets.plugins import *
 
