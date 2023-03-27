@@ -56,9 +56,15 @@ def __main__():
     print()
     if type(number) == str:
         if number == '>':
-            idcrypter()
+            if not page + 1 > 2:
+                page += 1
+                idcrypter()
+                enc_options2()
         elif number == '<':
-            idcrypter()
+            if not page - 1 < 1:
+                page -= 1
+                idcrypter()
+                enc_options()
     if type(number) == int:
         if number == -1:
             clear()
@@ -127,7 +133,10 @@ def __main__():
             sleep(0.5)
     clear()
     idcrypter()
-    enc_options()
+    if page == 1:
+        enc_options()
+    else:
+        enc_options2()
 
 
 while True:
