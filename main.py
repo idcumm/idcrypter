@@ -58,13 +58,9 @@ def __main__():
         if number == '>':
             if not page + 1 > 2:
                 page += 1
-                idcrypter()
-                enc_options2()
         elif number == '<':
             if not page - 1 < 1:
                 page -= 1
-                idcrypter()
-                enc_options()
     if type(number) == int:
         if number == -1:
             clear()
