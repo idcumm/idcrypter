@@ -1,8 +1,7 @@
 # afegir encriptacions
-# # ordenar encriptaions
+# ordenar encriptaions
 # modificar encriptacio DES i MD5
 # Fer opcio de diferents numeros en una eleccion
-# asignar tma automicament
 
 from plugins import *
 
