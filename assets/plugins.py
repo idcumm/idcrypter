@@ -69,7 +69,7 @@ def idcrypter():
                                |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
                                |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
                                j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
+                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
     elif color_shade == 'purple_to_blue':
         print(Center.XCenter(Colorate.Vertical(Colors.purple_to_blue, """
                                ____  ___      __  ____   __ __  ____  ______    ___  ____  
@@ -78,7 +78,7 @@ def idcrypter():
                                |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
                                |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
                                j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
+                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
     elif color_shade == 'yellow_to_green':
         print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_green, """
                                ____  ___      __  ____   __ __  ____  ______    ___  ____  
@@ -87,7 +87,7 @@ def idcrypter():
                                |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
                                |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
                                j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n\n""", 1)))
+                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
 
 
 def enc_options():
