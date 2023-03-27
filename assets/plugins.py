@@ -63,12 +63,12 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.light_red}Encriptación MD5                    {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Texto a Pig Latin            {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Pig Latin a Texto
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}Texto a ROT-13                      {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Codificar URL                {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Descodificar URL
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}] {Colors.green}Configuración                        {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}] {Colors.green}Anterior Página               {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}] {Colors.green}Siguiente Página
-\n"""))
+\n\n"""))
 
 
 def enc_options2():
     print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}AES                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Triple DES               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
+\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}AES                                  {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Triple DES                    {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Test
 \n
 \n
 \n
@@ -76,11 +76,19 @@ def enc_options2():
 \n
 \n
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}] {Colors.green}Configuración                        {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}] {Colors.green}Anterior Página               {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}] {Colors.green}Siguiente Página
-\n"""))
+\n\n"""))
 
 
 def config_options():
-    print(Center.XCenter(f"""\n\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Salir
+    print(Center.XCenter(f"""
+    \n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}] {Colors.white}Temas                      {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}] {Colors.white}Test               {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}] {Colors.white}Salir
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
+    \n
     \n\n"""))
 
 

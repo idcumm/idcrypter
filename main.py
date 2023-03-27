@@ -3,6 +3,7 @@
 # Fer menu igual que ATIO
 # Fer opcio de diferents numeros en una eleccion#
 # cambiar espais per tabuladors
+# Alinear configuracion
 
 from assets.plugins import *
 
@@ -64,6 +65,7 @@ def __main__():
     if type(number) == int:
         if number == -1:
             clear()
+            idcrypter()
             config_options()
             config_main()
         elif number == 9:
