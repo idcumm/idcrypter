@@ -6,8 +6,10 @@ from bs4 import BeautifulSoup
 from time import sleep
 from pystyle import Colors, Colorate, Write, Center
 
-color_shade = 'yellow_to_red'
 number = 0
+extract = open('data.dll', 'r')
+if extract.mode == 'r':
+    color_shade = extract.read()
 
 
 def eleccion():
@@ -146,3 +148,6 @@ def config_main():
             color_shade = 'purple_to_blue'
         if number == 2:
             color_shade = 'yellow_to_green'
+        storage = open('data.dll', 'w')
+        storage.write(color_shade)
+        storage.close()
