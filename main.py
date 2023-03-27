@@ -17,7 +17,9 @@ enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'bin2hex', 'hex2bin', '
 after_keyword = ''
 page = 1
 
-print(Colors.white, f'\n\n    >> Intentando establecer la conexión con el servidor...')
+if __name__ == '__main__':
+    print(Colors.white, '\n\n    >> Archivo __main__ conectado exitosamente...')
+print(Colors.white, '   >> Intentando establecer la conexión con el servidor...')
 while True:
     try:
         requests.get(url)
