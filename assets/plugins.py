@@ -102,7 +102,7 @@ def enc_options():
 
 def enc_options2():
     print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}AES                                 {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Triple DES                   {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Test
+\n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Encriptación AES                    {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Triple DES                   {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Test
 \n
 \n
 \n
