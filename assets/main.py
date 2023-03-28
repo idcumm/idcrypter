@@ -42,8 +42,8 @@ def __main__():
     global page
     global soup
     global number
-    number = Write.Input(
-        "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
+    number = input(
+        "    >> [#] Elección: ", Colors.light_gray)
     try:
         number = int(number) - 1
     except (TypeError, ValueError):
