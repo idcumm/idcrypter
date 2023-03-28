@@ -11,8 +11,8 @@ progress_bar(30, 0, 0.03)
 
 url = 'https://superpatanegra.com/texto/index.php'
 url2 = 'https://cifraronline.com/descifrar-aes'
-enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'bin2hex', 'hex2bin', 'backwards', 'b64enc', 'b64dec',
-             'caesarbf', 'crypt', 'entityenc', 'entitydec', 'l33t', 'del33t', 'md5', 'igpay', 'unigpay', 'rot-13', 'urlenc', 'urldec']
+enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec',
+             'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
 after_keyword = ''
 page = 1
 
@@ -99,7 +99,7 @@ def __main__():
             print()
             Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                         Colors.light_gray, interval=0.01)
-        elif number <= 20 and number >= 0:
+        elif number <= 16 and number >= 0:
             while True:
                 try:
                     text = Write.Input(
