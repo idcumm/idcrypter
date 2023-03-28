@@ -14,6 +14,7 @@ url2 = 'https://cifraronline.com/pad'
 enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec', 'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
 enc_types2 = ['aes', 'des', 'rijndael192', 'rijndael256', 'serpent', 'tripledes', 'twofish', 'blowfish', 'cast5', 'cast6', 'gost', 'loki97', 'saferplus', 'xtea']
 after_keyword = ''
+soup = ''
 page = 1
 
 if __name__ == '__main__':
@@ -48,6 +49,7 @@ enc_options()
 def __main__():
     global after_keyword
     global page
+    global soup
     number = Write.Input(
         "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
     try:
@@ -136,6 +138,8 @@ def __main__():
                 print()
                 if text == '':
                     text = after_keyword
+                    if after_keyword == '':
+                        text = soup
                 password = Write.Input(
                         '    >> Escriba una contraseña: ', Colors.light_gray, interval=0.01)
                 print()
