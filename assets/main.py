@@ -112,7 +112,7 @@ def __main__():
                             Colors.light_gray, interval=0.01)
             except IndexError:
                 print()
-        elif number >= 17 and number <= 36:
+        elif number >= 17 and number <= 30:
             try:
                 number -= 17
                 encrypt = Write.Input(

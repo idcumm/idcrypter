@@ -103,19 +103,19 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Texto al revés                      {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Base 64 (cifrar)             {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}Base 64 (descifrar)
 \n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Cifrado César                       {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}Entidades HTML (cifrar)      {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}Entidades HTML (descifrar)
 \n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Cifrado ROT-13                      {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}l33t 5p34k (cifrar)          {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}l33t 5p34k (descifrar)
-\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Pig Latin (cifrar)                  {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Pig Latin (descifrar)        {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}
-\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}                                    {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}                             {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}
+\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Pig Latin (cifrar)                  {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Pig Latin (descifrar)        {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}AES
+\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}DES                                 {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Rijndael 192                 {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Rijndael 256
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n\n"""))
 
 
 def enc_options2():
     print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Encriptación AES                    {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Triple DES                   {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}Rijndael 192
-\n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Serpent                             {Colors.yellow}[{Colors.light_gray}26{Colors.yellow}] {Colors.white}TwoFish                      {Colors.yellow}[{Colors.light_gray}27{Colors.yellow}] {Colors.white}Blowfish
-\n    {Colors.yellow}[{Colors.light_gray}28{Colors.yellow}] {Colors.white}CAST5                               {Colors.yellow}[{Colors.light_gray}29{Colors.yellow}] {Colors.white}CAST6                        {Colors.yellow}[{Colors.light_gray}30{Colors.yellow}] {Colors.white}GOST
-\n    {Colors.yellow}[{Colors.light_gray}31{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}32{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}33{Colors.yellow}] {Colors.white}XTEA
-\n    {Colors.yellow}[{Colors.light_gray}34{Colors.yellow}] {Colors.white}DES                                 {Colors.yellow}[{Colors.light_gray}35{Colors.yellow}] {Colors.white}                             {Colors.yellow}[{Colors.light_gray}36{Colors.yellow}] {Colors.white}
+\n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Serpent                             {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Triple DES                   {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}TwoFish
+\n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Blowfish                            {Colors.yellow}[{Colors.light_gray}26{Colors.yellow}] {Colors.white}CAST5                        {Colors.yellow}[{Colors.light_gray}27{Colors.yellow}] {Colors.white}CAST6
+\n    {Colors.yellow}[{Colors.light_gray}28{Colors.yellow}] {Colors.white}GOST                                {Colors.yellow}[{Colors.light_gray}29{Colors.yellow}] {Colors.white}Loki97                       {Colors.yellow}[{Colors.light_gray}30{Colors.yellow}] {Colors.white}Safer+
+\n    {Colors.yellow}[{Colors.light_gray}31{Colors.yellow}] {Colors.white}XTEA
+\n
 \n
 \n
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
