@@ -1,6 +1,7 @@
 # separar enc y dec
 # ordenar encriptaions
 # Fer tots a la vegada
+# Fer autotema
 
 from plugins import *
 
