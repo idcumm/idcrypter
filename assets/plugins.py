@@ -7,10 +7,17 @@ warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 number = 0
 color_shade = 'yellow_to_red'
+url = 'https://superpatanegra.com/texto/index.php'
+url2 = 'https://cifraronline.com/pad'
+enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec', 'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
+enc_types2 = ['aes', 'des', 'rijndael192', 'rijndael256', 'serpent', 'tripledes', 'twofish', 'blowfish', 'cast5', 'cast6', 'gost', 'loki97', 'saferplus', 'xtea']
+after_keyword = ''
+soup = ''
+page = 1
+
 # extract = open('data.dll', 'r')
 # if extract.mode == 'r':
 #     color_shade = extract.read()
-
 
 def eleccion():
     global number
