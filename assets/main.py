@@ -1,6 +1,5 @@
-# afegir encriptacions
+# separar enc y dec
 # ordenar encriptaions
-# modificar encriptacio DES i MD5
 # Fer opcio de diferents numeros en una eleccion
 
 from plugins import *
