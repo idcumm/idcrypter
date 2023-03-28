@@ -160,6 +160,10 @@ def config_main():
         # storage.close()
 
 def num_function(_dec):
+    global after_keyword
+    global page
+    global soup
+    Dec = False
     try:
         encrypt = Write.Input(
                 '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
