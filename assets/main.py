@@ -42,7 +42,13 @@ def __main__():
     global page
     global soup
     global number
-    eleccion()
+    number = Write.Input(
+        "    >> [#] Elección: ", Colors.light_gray, interval=0.01)
+    try:
+        number = int(number) - 1
+    except (TypeError, ValueError):
+        number = str(number)
+    print()
     if type(number) == str:
         if number == '>':
             if not page + 1 > 2:
