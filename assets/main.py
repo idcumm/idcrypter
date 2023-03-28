@@ -57,7 +57,6 @@ def __main__():
             if not page - 1 < 1:
                 page -= 1
     elif type(number) == int:
-        print(number)
         if number == -1:
             clear()
             idcrypter()
