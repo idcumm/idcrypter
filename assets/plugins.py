@@ -21,8 +21,9 @@ page = 1
 
 def eleccion():
     global number
-    number = input(
-        "    >> [#] Elección: ", Colors.light_gray)
+    print( Colors.light_gray, 
+        "    >> [#] Elección: ", end='')
+    number = input()
     try:
         number = int(number) - 1
     except (TypeError, ValueError):
