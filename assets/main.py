@@ -17,7 +17,7 @@ after_keyword = ''
 page = 1
 
 if __name__ == '__main__':
-    print(Colors.white, '\n\n    >> Archivo __main__ conectado exitosamente...')
+    print(Colors.white, f'\n\n    >> Conexión con el archivo {__name__}.py establecida...')
 print(Colors.white, '   >> Intentando establecer la conexión con el servidor...')
 while True:
     try:
