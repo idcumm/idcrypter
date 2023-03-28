@@ -10,9 +10,9 @@ idcrypter()
 progress_bar(30, 0, 0.03)
 
 url = 'https://superpatanegra.com/texto/index.php'
-url2 = 'https://cifraronline.com/descifrar-aes'
-enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec',
-             'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
+url2 = 'https://cifraronline.com/pad'
+enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec', 'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
+enc_types2 = ['aes', 'des', 'rijndael192', 'rijndael256', 'serpent', 'tripledes', 'twofish', 'blowfish', 'cast5', 'cast6', 'gost', 'loki97', 'saferplus', 'xtea']
 after_keyword = ''
 page = 1
 
@@ -104,7 +104,7 @@ def __main__():
                 try:
                     text = Write.Input(
                         '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                    print('')
+                    print()
                     if text == '':
                         text = after_keyword
                     r = requests.post(
@@ -128,7 +128,34 @@ def __main__():
             print()
             Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                         Colors.light_gray, interval=0.01)
-            sleep(0.5)
+        elif number >= 17 and number <= 36:
+            try:
+                number -= 17
+                encrypt = Write.Input(
+                        '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
+                if encrypt == 'C':
+                    encrypt = 'encrypt'
+                elif encrypt == 'D':
+                    encrypt = 'decrypt'
+                print()
+                text = Write.Input(
+                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
+                if text == '':
+                    text = after_keyword
+                password = Write.Input(
+                        '    >> Escriba la contraseña del mensaje: ', Colors.light_gray, interval=0.01)
+                print()
+                r = requests.post(url2, data={'c':encrypt, 'text':text, 'pass':password, 'alg':enc_types2[number], 'mode':'ecb', 'hash':'md5', 'iiv':'0'})
+                soup = BeautifulSoup(r.text, features='html.parser')
+            except IndexError:
+                print('cacatua humana')
+                
+            Write.Print(f"""    {soup}
+                        """, Colors.yellow, interval=0.001)
+            print()
+            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                        Colors.light_gray, interval=0.01)
     clear()
     idcrypter()
     if page == 1:
