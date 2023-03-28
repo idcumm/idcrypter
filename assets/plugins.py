@@ -187,8 +187,6 @@ def num_function(numb, _dec):
         print()
         if text == '':
             text = after_keyword
-            if after_keyword == '':
-                text = soup
         if Dec == True:
             r = requests.post(
                 url, data={'text': text, 'cryptmethod': _dec, 'submit': 'OK'})
@@ -222,8 +220,6 @@ def num(numb):
         print()
         if text == '':
             text = after_keyword
-            if after_keyword == '':
-                text = soup
         r = requests.post(
             url, data={'text': text, 'cryptmethod': enc_types[numb], 'submit': 'OK'})  
         soup = BeautifulSoup(r.text, features='html.parser')

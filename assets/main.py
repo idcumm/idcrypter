@@ -79,8 +79,6 @@ def __main__():
                 print()
                 if text == '':
                     text = after_keyword
-                    if after_keyword == '':
-                        text = soup
                 r = requests.post(
                     url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
                 soup = BeautifulSoup(r.text, features='html.parser')
@@ -131,13 +129,12 @@ def __main__():
                 print()
                 if text == '':
                     text = after_keyword
-                    if after_keyword == '':
-                        text = soup
                 password = Write.Input(
                         '    >> Escriba una contraseña: ', Colors.light_gray, interval=0.01)
                 print()
                 r = requests.post(url2, data={'c':encrypt, 'text':text, 'pass':password, 'alg':enc_types2[number], 'mode':'ecb', 'hash':'md5', 'iiv':'0'})
-                soup = BeautifulSoup(r.text, features='html.parser')           
+                soup = BeautifulSoup(r.text, features='html.parser')
+                after_keyword = soup
                 Write.Print(f"""    {soup}
                          """, Colors.yellow, interval=0.001)
                 print()
