@@ -62,100 +62,92 @@ def __main__():
         elif number == '<':
             if not page - 1 < 1:
                 page -= 1
-    if type(number) == int:
+    elif type(number) == int:
         if number == -1:
             clear()
             idcrypter()
             config_options()
             config_main()
         elif number == 9:
-            while True:
-                try:
-                    text = Write.Input(
-                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                    print()
-                    if text == '':
-                        text = after_keyword
-                    r = requests.post(
-                        url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
-                    soup = BeautifulSoup(r.text, features='html.parser')
-                    data = [item.text for item in soup.select('td')]
-                    keyword = ': '
-                    before_keyword, keyword, after_keyword = data[1].partition(
-                        keyword)
-                    print()
-                    break
-                except IndexError:
-                    Write.Print('    >> Porvafor, escriba un mensaje válido.',
-                                Colors.light_red, interval=0.01)
-                    print('\n')
-                    sleep(0.5)
-            for i in range(len(data)):
+            try:
+                text = Write.Input(
+                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
+                if text == '':
+                    text = after_keyword
+                r = requests.post(
+                    url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
+                soup = BeautifulSoup(r.text, features='html.parser')
+                data = [item.text for item in soup.select('td')]
                 keyword = ': '
-                before_keyword, keyword, after_keyword = data[i].partition(
+                before_keyword, keyword, after_keyword = data[1].partition(
                     keyword)
-                print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
-            print()
-            print()
-            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                        Colors.light_gray, interval=0.01)
-        elif number <= 16 and number >= 0:
-            while True:
-                try:
-                    text = Write.Input(
-                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                    print()
-                    if text == '':
-                        text = after_keyword
-                    r = requests.post(
-                        url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
-                    soup = BeautifulSoup(r.text, features='html.parser')
-                    data = [item.text for item in soup.select('p')]
-                    keyword = 'TEXTO PROCESADO:'
-                    before_keyword, keyword, after_keyword = data[1].partition(
+                print()
+                for i in range(len(data)):
+                    keyword = ': '
+                    before_keyword, keyword, after_keyword = data[i].partition(
                         keyword)
-                    break
-                except IndexError:
-                    Write.Print('    >> Porvafor, escriba un mensaje válido.',
-                                Colors.light_red, interval=0.01)
-                    print('\n')
-                    sleep(0.5)
-            if len(after_keyword) > 200:
-                print(Colors.yellow, f'\n    {after_keyword}\n\n')
-            else:
-                Write.Print(f"""    {after_keyword}
-                            """, Colors.yellow, interval=0.001)
-            print()
-            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                        Colors.light_gray, interval=0.01)
+                    print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+                print()
+                print()
+                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                            Colors.light_gray, interval=0.01)
+            except IndexError:
+                print()
+        elif number <= 16 and number >= 0:
+            try:
+                text = Write.Input(
+                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
+                if text == '':
+                    text = after_keyword
+                r = requests.post(
+                    url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
+                soup = BeautifulSoup(r.text, features='html.parser')
+                data = [item.text for item in soup.select('p')]
+                keyword = 'TEXTO PROCESADO:'
+                before_keyword, keyword, after_keyword = data[1].partition(
+                    keyword)
+                if len(after_keyword) > 200:
+                    print(Colors.yellow, f'\n    {after_keyword}\n\n')
+                else:
+                    Write.Print(f"""    {after_keyword}
+                                """, Colors.yellow, interval=0.001)
+                print()
+                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                            Colors.light_gray, interval=0.01)
+            except IndexError:
+                print()
         elif number >= 17 and number <= 36:
             try:
                 number -= 17
                 encrypt = Write.Input(
                         '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
-                if encrypt == 'C':
+                if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar':
                     encrypt = 'encrypt'
-                elif encrypt == 'D':
+                    print()
+                    text = Write.Input(
+                            '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+                elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar':
                     encrypt = 'decrypt'
-                print()
-                text = Write.Input(
-                        '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                    print()
+                    text = Write.Input(
+                            '    >> Escriba el mensaje que desea desencriptar: ', Colors.light_gray, interval=0.01)
                 print()
                 if text == '':
                     text = after_keyword
                 password = Write.Input(
-                        '    >> Escriba la contraseña del mensaje: ', Colors.light_gray, interval=0.01)
+                        '    >> Escriba una contraseña: ', Colors.light_gray, interval=0.01)
                 print()
                 r = requests.post(url2, data={'c':encrypt, 'text':text, 'pass':password, 'alg':enc_types2[number], 'mode':'ecb', 'hash':'md5', 'iiv':'0'})
-                soup = BeautifulSoup(r.text, features='html.parser')
+                soup = BeautifulSoup(r.text, features='html.parser')           
+                Write.Print(f"""    {soup}
+                         """, Colors.yellow, interval=0.001)
+                print()
+                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                            Colors.light_gray, interval=0.01)
             except IndexError:
-                print('cacatua humana')
-                
-            Write.Print(f"""    {soup}
-                        """, Colors.yellow, interval=0.001)
-            print()
-            Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                        Colors.light_gray, interval=0.01)
+                print()    
     clear()
     idcrypter()
     if page == 1:

@@ -1,10 +1,9 @@
-import requests
-import os
-import sys
-import ctypes
-from bs4 import BeautifulSoup
+import requests, os, sys, ctypes, warnings
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from time import sleep
 from pystyle import Colors, Colorate, Write, Center
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 number = 0
 color_shade = 'yellow_to_red'
