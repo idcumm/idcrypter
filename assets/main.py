@@ -1,6 +1,6 @@
 # separar enc y dec
 # ordenar encriptaions
-# Fer opcio de diferents numeros en una eleccion
+# Fer tots a la vegada
 
 from plugins import *
 
@@ -61,7 +61,17 @@ def __main__():
             idcrypter()
             config_options()
             config_main()
-        elif number == 9:
+        elif number == 0:
+            num_function('bin2asc')
+        elif number == 1:
+            num_function('hex2asc')
+        elif number == 2:
+            num_function('urldec')
+        elif number == 3:
+            num()
+        elif number == 4:
+            num_function('b64dec')
+        elif number == 5:
             try:
                 text = Write.Input(
                     '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
@@ -89,35 +99,17 @@ def __main__():
                             Colors.light_gray, interval=0.01)
             except IndexError:
                 print()
-        elif number <= 16 and number >= 0:
-            try:
-                text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
-                print()
-                if text == '':
-                    text = after_keyword
-                    if after_keyword == '':
-                        text = soup
-                r = requests.post(
-                    url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
-                soup = BeautifulSoup(r.text, features='html.parser')
-                data = [item.text for item in soup.select('p')]
-                keyword = 'TEXTO PROCESADO:'
-                before_keyword, keyword, after_keyword = data[1].partition(
-                    keyword)
-                if len(after_keyword) > 200:
-                    print(Colors.yellow, f'\n    {after_keyword}\n\n')
-                else:
-                    Write.Print(f"""    {after_keyword}
-                                """, Colors.yellow, interval=0.001)
-                print()
-                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
-                            Colors.light_gray, interval=0.01)
-            except IndexError:
-                print()
+        elif number == 6:
+            num_function('entitydec')
+        elif number == 7:
+            num()
+        elif number == 8:
+            num_function('del33t')
+        elif number == 9:
+            num_function('unigpay')
         elif number >= 17 and number <= 30:
             try:
-                number -= 17
+                number -= len(enc_types)
                 encrypt = Write.Input(
                         '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
                 if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar':

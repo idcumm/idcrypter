@@ -9,7 +9,7 @@ number = 0
 color_shade = 'yellow_to_red'
 url = 'https://superpatanegra.com/texto/index.php'
 url2 = 'https://cifraronline.com/pad'
-enc_types = ['asc2bin', 'bin2asc', 'asc2hex', 'hex2asc', 'urlenc', 'urldec', 'backwards', 'b64enc', 'b64dec', 'caesarbf', 'entityenc', 'entitydec', 'rot-13', 'l33t', 'del33t', 'igpay', 'unigpay']
+enc_types = ['asc2bin', 'asc2hex', 'urlenc', 'backwards', 'b64enc', 'caesarbf', 'entityenc', 'rot-13', 'l33t', 'igpay']
 enc_types2 = ['aes', 'des', 'rijndael192', 'rijndael256', 'serpent', 'tripledes', 'twofish', 'blowfish', 'cast5', 'cast6', 'gost', 'loki97', 'saferplus', 'xtea']
 after_keyword = ''
 soup = ''
@@ -158,3 +158,77 @@ def config_main():
         # storage = open('data.dll', 'w')
         # storage.write(color_shade)
         # storage.close()
+
+def num_function(_dec):
+    try:
+        encrypt = Write.Input(
+                '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
+        if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar':
+            encrypt = 'encrypt'
+            print()
+            text = Write.Input(
+                    '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+        elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar':
+            encrypt = 'decrypt'
+            print()
+            Dec = True
+            text = Write.Input(
+                    '    >> Escriba el mensaje que desea desencriptar: ', Colors.light_gray, interval=0.01)
+        else:
+            encrypt = 'encrypt'
+            print()
+            text = Write.Input(
+                    '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+        print()
+        if text == '':
+            text = after_keyword
+            if after_keyword == '':
+                text = soup
+        if Dec == True:
+            r = requests.post(
+                url, data={'text': text, 'cryptmethod': _dec, 'submit': 'OK'})
+        else:
+            r = requests.post(
+                url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})  
+        soup = BeautifulSoup(r.text, features='html.parser')
+        data = [item.text for item in soup.select('p')]
+        keyword = 'TEXTO PROCESADO:'
+        before_keyword, keyword, after_keyword = data[1].partition(
+            keyword)
+        if len(after_keyword) > 200:
+            print(Colors.yellow, f'\n    {after_keyword}\n\n')
+        else:
+            Write.Print(f"""    {after_keyword}
+                        """, Colors.yellow, interval=0.001)
+        print()
+        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                    Colors.light_gray, interval=0.01)
+    except IndexError:
+        print()
+        
+def num():
+    try:
+        text = Write.Input(
+                '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+        print()
+        if text == '':
+            text = after_keyword
+            if after_keyword == '':
+                text = soup
+        r = requests.post(
+            url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})  
+        soup = BeautifulSoup(r.text, features='html.parser')
+        data = [item.text for item in soup.select('p')]
+        keyword = 'TEXTO PROCESADO:'
+        before_keyword, keyword, after_keyword = data[1].partition(
+            keyword)
+        if len(after_keyword) > 200:
+            print(Colors.yellow, f'\n    {after_keyword}\n\n')
+        else:
+            Write.Print(f"""    {after_keyword}
+                        """, Colors.yellow, interval=0.001)
+        print()
+        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                    Colors.light_gray, interval=0.01)
+    except IndexError:
+        print()
