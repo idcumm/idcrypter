@@ -69,7 +69,7 @@ def __main__():
         elif number == 2:
             num_function(number,'urldec')
         elif number == 3:
-            num()
+            num(number)
         elif number == 4:
             num_function(number,'b64dec')
         elif number == 5:
