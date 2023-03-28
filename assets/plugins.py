@@ -98,23 +98,23 @@ def idcrypter():
 
 def enc_options():
     print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario (cifrar)                    {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Binario (descifrar)          {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Hexadecimal (cifrar)
-\n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Hexadecimal (descifrar)             {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Cifrado URL (cifrar)         {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado URL (descifrar)
-\n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Texto al revés                      {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Base 64 (cifrar)             {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}Base 64 (descifrar)
-\n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Cifrado César                       {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}Entidades HTML (cifrar)      {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}Entidades HTML (descifrar)
-\n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Cifrado ROT-13                      {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}l33t 5p34k (cifrar)          {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}l33t 5p34k (descifrar)
-\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Pig Latin (cifrar)                  {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}Pig Latin (descifrar)        {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}AES
-\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}DES                                 {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}Rijndael 192                 {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}Rijndael 256
+\n    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                             {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                  {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
+\n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Texto al revés                      {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Base 64                      {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado César
+\n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Entidades HTML                      {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Cifrado ROT-13               {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}l33t 5p34k
+\n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Pig Latin                           {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}AES                          {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}DES
+\n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Rijndael 192                        {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}Rijndael 256                 {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}Serpent
+\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Triple DES                          {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}TwoFish                      {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Blowfish
+\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}CAST5                               {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}CAST6                        {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}GOST
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n\n"""))
 
 
 def enc_options2():
     print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Serpent                             {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Triple DES                   {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}TwoFish
-\n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Blowfish                            {Colors.yellow}[{Colors.light_gray}26{Colors.yellow}] {Colors.white}CAST5                        {Colors.yellow}[{Colors.light_gray}27{Colors.yellow}] {Colors.white}CAST6
-\n    {Colors.yellow}[{Colors.light_gray}28{Colors.yellow}] {Colors.white}GOST                                {Colors.yellow}[{Colors.light_gray}29{Colors.yellow}] {Colors.white}Loki97                       {Colors.yellow}[{Colors.light_gray}30{Colors.yellow}] {Colors.white}Safer+
-\n    {Colors.yellow}[{Colors.light_gray}31{Colors.yellow}] {Colors.white}XTEA
+\n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
+\n
+\n
+\n
 \n
 \n
 \n
@@ -159,10 +159,11 @@ def config_main():
         # storage.write(color_shade)
         # storage.close()
 
-def num_function(_dec):
+def num_function(numb, _dec):
     global after_keyword
     global page
     global soup
+    global number
     Dec = False
     try:
         encrypt = Write.Input(
@@ -193,7 +194,7 @@ def num_function(_dec):
                 url, data={'text': text, 'cryptmethod': _dec, 'submit': 'OK'})
         else:
             r = requests.post(
-                url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})  
+                url, data={'text': text, 'cryptmethod': enc_types[numb], 'submit': 'OK'})  
         soup = BeautifulSoup(r.text, features='html.parser')
         data = [item.text for item in soup.select('p')]
         keyword = 'TEXTO PROCESADO:'
@@ -210,7 +211,11 @@ def num_function(_dec):
     except IndexError:
         print()
         
-def num():
+def num(numb):
+    global after_keyword
+    global page
+    global soup
+    global number
     try:
         text = Write.Input(
                 '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
@@ -220,7 +225,7 @@ def num():
             if after_keyword == '':
                 text = soup
         r = requests.post(
-            url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})  
+            url, data={'text': text, 'cryptmethod': enc_types[numb], 'submit': 'OK'})  
         soup = BeautifulSoup(r.text, features='html.parser')
         data = [item.text for item in soup.select('p')]
         keyword = 'TEXTO PROCESADO:'

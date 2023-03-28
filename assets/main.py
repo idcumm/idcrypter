@@ -57,21 +57,22 @@ def __main__():
             if not page - 1 < 1:
                 page -= 1
     elif type(number) == int:
+        print(number)
         if number == -1:
             clear()
             idcrypter()
             config_options()
             config_main()
         elif number == 0:
-            num_function('bin2asc')
+            num_function(number, 'bin2asc')
         elif number == 1:
-            num_function('hex2asc')
+            num_function(number, 'hex2asc')
         elif number == 2:
-            num_function('urldec')
+            num_function(number,'urldec')
         elif number == 3:
             num()
         elif number == 4:
-            num_function('b64dec')
+            num_function(number,'b64dec')
         elif number == 5:
             try:
                 text = Write.Input(
@@ -101,14 +102,14 @@ def __main__():
             except IndexError:
                 print()
         elif number == 6:
-            num_function('entitydec')
+            num_function(number,'entitydec')
         elif number == 7:
-            num()
+            num(number)
         elif number == 8:
-            num_function('del33t')
+            num_function(number,'del33t')
         elif number == 9:
-            num_function('unigpay')
-        elif number >= 17 and number <= 30:
+            num_function(number,'unigpay')
+        elif number >= 10 and number <= 23:
             try:
                 number -= len(enc_types)
                 encrypt = Write.Input(
