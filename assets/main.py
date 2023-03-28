@@ -69,6 +69,8 @@ def __main__():
                 print()
                 if text == '':
                     text = after_keyword
+                    if after_keyword == '':
+                        text = soup
                 r = requests.post(
                     url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
                 soup = BeautifulSoup(r.text, features='html.parser')
@@ -95,6 +97,8 @@ def __main__():
                 print()
                 if text == '':
                     text = after_keyword
+                    if after_keyword == '':
+                        text = soup
                 r = requests.post(
                     url, data={'text': text, 'cryptmethod': enc_types[number], 'submit': 'OK'})
                 soup = BeautifulSoup(r.text, features='html.parser')
