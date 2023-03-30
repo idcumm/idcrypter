@@ -160,7 +160,7 @@ def __main__():
             except IndexError:
                 print()    
         elif number == 24:
-            print('    >> Me da palo hacer el 24 xd')
+            print('    >> Me da palo hacer el 25 xd')
             print()
             Write.Input('    >> Pulsa enter para continuar: ',
                         Colors.light_gray, interval=0.01)
