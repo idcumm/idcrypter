@@ -1,7 +1,4 @@
-# separar enc y dec
-# ordenar encriptaions
 # Fer tots a la vegada
-# Fer autotema
 # Fer servir Install Forge en comptes de pyinstaller
 
 from plugins import *
