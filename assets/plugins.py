@@ -151,7 +151,7 @@ def enc_options2():
     if color == 'yellow':
         print(Center.XCenter(f"""
 \n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
-\n
+\n    {Colors.purple}[{Colors.light_gray}25{Colors.purple}] {Colors.white}Encriptación total
 \n
 \n
 \n
@@ -162,7 +162,7 @@ def enc_options2():
     elif color == 'purple':
         print(Center.XCenter(f"""
 \n    {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                              {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                       {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
-\n
+\n    {Colors.purple}[{Colors.light_gray}25{Colors.purple}] {Colors.white}Encriptación total
 \n
 \n
 \n
@@ -173,7 +173,7 @@ def enc_options2():
     elif color == 'light_green':
         print(Center.XCenter(f"""
 \n    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
-\n
+\n    {Colors.purple}[{Colors.light_gray}25{Colors.purple}] {Colors.white}Encriptación total
 \n
 \n
 \n
@@ -305,7 +305,7 @@ def num_function(numb, _dec):
                 Write.Print(f"""    {after_keyword}
                         """, Colors.light_green, interval=0.001)
         print()
-        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+        Write.Input('    >> Pulsa enter para continuar: ',
                     Colors.light_gray, interval=0.01)
     except IndexError:
         print()
@@ -346,7 +346,7 @@ def num(numb):
                 Write.Print(f"""    {after_keyword}
                         """, Colors.light_green, interval=0.001)
         print()
-        Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+        Write.Input('    >> Pulsa enter para continuar: ',
                     Colors.light_gray, interval=0.01)
     except IndexError:
         print()

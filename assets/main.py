@@ -104,7 +104,7 @@ def __main__():
                         print(Colors.light_green, f'[+{i+1}]:\t\t{after_keyword}')    
                 print()
                 print()
-                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                Write.Input('    >> Pulsa enter para continuar: ',
                             Colors.light_gray, interval=0.01)
             except IndexError:
                 print()
@@ -155,10 +155,15 @@ def __main__():
                     Write.Print(f"""    {soup}
                          """, Colors.light_green, interval=0.001)
                 print()
-                Write.Input('    >> Pulsa cualquier tecla para continuar: ',
+                Write.Input('    >> Pulsa enter para continuar: ',
                             Colors.light_gray, interval=0.01)
             except IndexError:
                 print()    
+        elif number == 24:
+            print('    >> Me da palo hacer el 24 xd')
+            print()
+            Write.Input('    >> Pulsa enter para continuar: ',
+                        Colors.light_gray, interval=0.01)
     clear()
     idcrypter()
     if page == 1:
