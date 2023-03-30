@@ -283,10 +283,22 @@ def num_function(numb, _dec):
         before_keyword, keyword, after_keyword = data[1].partition(
             keyword)
         if len(after_keyword) > 200:
-            print(Colors.yellow, f'\n    {after_keyword}\n\n')
+            if color == 'yellow':
+                print(Colors.yellow, f'\n    {after_keyword}\n\n')
+            elif color == 'purple':
+                print(Colors.purple, f'\n    {after_keyword}\n\n')
+            elif color == 'light_green':
+                print(Colors.light_green, f'\n    {after_keyword}\n\n')
         else:
-            Write.Print(f"""    {after_keyword}
+            if color == 'yellow':
+                Write.Print(f"""    {after_keyword}
                         """, Colors.yellow, interval=0.001)
+            elif color == 'purple':
+                Write.Print(f"""    {after_keyword}
+                        """, Colors.purple, interval=0.001)
+            elif color == 'light_green':
+                Write.Print(f"""    {after_keyword}
+                        """, Colors.light_green, interval=0.001)
         print()
         Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                     Colors.light_gray, interval=0.01)
@@ -312,10 +324,22 @@ def num(numb):
         before_keyword, keyword, after_keyword = data[1].partition(
             keyword)
         if len(after_keyword) > 200:
-            print(Colors.yellow, f'\n    {after_keyword}\n\n')
+            if color == 'yellow':
+                print(Colors.yellow, f'\n    {after_keyword}\n\n')
+            elif color == 'purple':
+                print(Colors.purple, f'\n    {after_keyword}\n\n')
+            elif color == 'light_green':
+                print(Colors.light_green, f'\n    {after_keyword}\n\n')
         else:
-            Write.Print(f"""    {after_keyword}
+            if color == 'yellow':
+                Write.Print(f"""    {after_keyword}
                         """, Colors.yellow, interval=0.001)
+            elif color == 'purple':
+                Write.Print(f"""    {after_keyword}
+                        """, Colors.purple, interval=0.001)
+            elif color == 'light_green':
+                Write.Print(f"""    {after_keyword}
+                        """, Colors.light_green, interval=0.001)
         print()
         Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                     Colors.light_gray, interval=0.01)
