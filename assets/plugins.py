@@ -257,12 +257,12 @@ def num_function(numb, _dec):
     try:
         encrypt = Write.Input(
                 '    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
-        if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar':
+        if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar' or encrypt == 'cifrar':
             encrypt = 'encrypt'
             print()
             text = Write.Input(
                     '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
-        elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar':
+        elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar' or encrypt == 'descifrar':
             encrypt = 'decrypt'
             print()
             Dec = True
