@@ -151,7 +151,7 @@ def enc_options2():
     if color == 'yellow':
         print(Center.XCenter(f"""
 \n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
-\n    {Colors.purple}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Encriptación total
+\n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Encriptación total
 \n
 \n
 \n
@@ -173,7 +173,7 @@ def enc_options2():
     elif color == 'light_green':
         print(Center.XCenter(f"""
 \n    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
-\n    {Colors.purple}[{Colors.light_gray}25{Colors.light_green}] {Colors.white}Encriptación total
+\n    {Colors.light_green}[{Colors.light_gray}25{Colors.light_green}] {Colors.white}Encriptación total
 \n
 \n
 \n
