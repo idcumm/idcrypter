@@ -5,7 +5,7 @@ try:
 except (ImportError, ModuleNotFoundError):
     print('   >> Error al intentar importar las dependencias...')
     print('\n   >> Verifique que el archivo plugins.py se encuentre en el directorio.')
-    input('   >> Por favor, presione Enter para continuar...')
+    input('\n   >> Por favor, presione Enter para continuar...')
 
 setTitle('Loading...')
 idcrypter()
