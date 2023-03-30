@@ -37,6 +37,7 @@ enc_options()
 
 
 def __main__():
+    global color
     global after_keyword
     global page
     global soup
@@ -91,7 +92,12 @@ def __main__():
                     keyword = ': '
                     before_keyword, keyword, after_keyword = data[i].partition(
                         keyword)
-                    print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+                    if color == 'yellow':
+                        print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+                    elif color == 'purple':
+                        print(Colors.purple, f'[+{i+1}]:\t\t{after_keyword}')
+                    elif color == 'light_green':
+                        print(Colors.light_green, f'[+{i+1}]:\t\t{after_keyword}')    
                 print()
                 print()
                 Write.Input('    >> Pulsa cualquier tecla para continuar: ',
@@ -135,8 +141,15 @@ def __main__():
                 r = requests.post(url2, data={'c':encrypt, 'text':text, 'pass':password, 'alg':enc_types2[number], 'mode':'ecb', 'hash':'md5', 'iiv':'0'})
                 soup = BeautifulSoup(r.text, features='html.parser')
                 after_keyword = soup
-                Write.Print(f"""    {soup}
+                if color == 'yellow':
+                    Write.Print(f"""    {soup}
                          """, Colors.yellow, interval=0.001)
+                elif color == 'purple':
+                    Write.Print(f"""    {soup}
+                         """, Colors.purple, interval=0.001)
+                elif color == 'light_green':
+                    Write.Print(f"""    {soup}
+                         """, Colors.light_green, interval=0.001)
                 print()
                 Write.Input('    >> Pulsa cualquier tecla para continuar: ',
                             Colors.light_gray, interval=0.01)
