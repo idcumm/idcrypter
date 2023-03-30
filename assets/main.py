@@ -1,7 +1,9 @@
 # Fer tots a la vegada
 # Fer servir Install Forge en comptes de pyinstaller
-
-from plugins import *
+try:
+    from plugins import *
+except (ImportError, ModuleNotFoundError):
+    print('   >> Error al intentar importar las dependencias...')
 
 setTitle('Loading...')
 idcrypter()
