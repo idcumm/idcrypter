@@ -267,12 +267,12 @@ def num_function(numb, _dec):
             print()
             Dec = True
             text = Write.Input(
-                    '    >> Escriba el mensaje que desea desencriptar: ', Colors.light_gray, interval=0.01)
+                    '    >> Escriba el mensaje que desea descifrar: ', Colors.light_gray, interval=0.01)
         else:
             encrypt = 'encrypt'
             print()
             text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+                    '    >> Escriba el mensaje que desea cifrar: ', Colors.light_gray, interval=0.01)
         print()
         if text == '':
             text = after_keyword
