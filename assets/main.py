@@ -97,11 +97,11 @@ def __main__():
                     before_keyword, keyword, after_keyword = data[i].partition(
                         keyword)
                     if color == 'yellow':
-                        print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+                        print(Colors.yellow, f'    [+{i+1}]:\t\t{after_keyword}')
                     elif color == 'purple':
-                        print(Colors.purple, f'[+{i+1}]:\t\t{after_keyword}')
+                        print(Colors.purple, f'    [+{i+1}]:\t\t{after_keyword}')
                     elif color == 'light_green':
-                        print(Colors.light_green, f'[+{i+1}]:\t\t{after_keyword}')    
+                        print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')    
                 print()
                 print()
                 Write.Input('    >> Pulsa enter para continuar: ',
@@ -160,7 +160,47 @@ def __main__():
             except IndexError:
                 print()    
         elif number == 24:
-            print('    >> Me da palo hacer el 25 xd')
+            num_function(0, 'bin2asc')
+            num_function(1, 'hex2asc')
+            num_function(2,'urldec')
+            num(3)
+            num_function(4,'b64dec')
+            try:
+                text = Write.Input(
+                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                print()
+                if text == '':
+                    text = after_keyword
+                r = requests.post(
+                    url, data={'text': text, 'cryptmethod': enc_types[5], 'submit': 'OK'})
+                soup = BeautifulSoup(r.text, features='html.parser')
+                data = [item.text for item in soup.select('td')]
+                keyword = ': '
+                before_keyword, keyword, after_keyword = data[1].partition(
+                    keyword)
+                print()
+                for i in range(len(data)):
+                    keyword = ': '
+                    before_keyword, keyword, after_keyword = data[i].partition(
+                        keyword)
+                    if color == 'yellow':
+                        print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
+                    elif color == 'purple':
+                        print(Colors.purple, f'[+{i+1}]:\t\t{after_keyword}')
+                    elif color == 'light_green':
+                        print(Colors.light_green, f'[+{i+1}]:\t\t{after_keyword}')    
+                print()
+                print()
+                Write.Input('    >> Pulsa enter para continuar: ',
+                            Colors.light_gray, interval=0.01)
+            except IndexError:
+                print()
+            num_function(6,'entitydec')
+            num(7)
+            num_function(8,'del33t')
+            num_function(9,'unigpay')
+            
+                
             print()
             Write.Input('    >> Pulsa enter para continuar: ',
                         Colors.light_gray, interval=0.01)
