@@ -41,11 +41,18 @@ enc_options()
 
 
 def __main__():
-    global color
-    global after_keyword
-    global page
-    global soup
     global number
+    global color_shade
+    global color
+    global url
+    global url2
+    global enc_types
+    global enc_types2
+    global text
+    global after_keyword
+    global soup
+    global page
+    global Dec
     print( Colors.light_gray, 
         "    >> [#] Elección: ", end='')
     number = input()
@@ -160,47 +167,35 @@ def __main__():
             except IndexError:
                 print()    
         elif number == 24:
-            num_function(0, 'bin2asc')
-            num_function(1, 'hex2asc')
-            num_function(2,'urldec')
-            num(3)
-            num_function(4,'b64dec')
-            try:
-                text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+            Dec = False
+            encrypt = Write.Input('    >> Desea [C] Cifrar o [D] Descifrar el mensaje?: ', Colors.light_gray, interval=0.01)
+            if encrypt == 'C' or encrypt == 'c' or encrypt == 'Cifrar' or encrypt == 'cifrar':
+                encrypt = 'encrypt'
                 print()
-                if text == '':
-                    text = after_keyword
-                r = requests.post(
-                    url, data={'text': text, 'cryptmethod': enc_types[5], 'submit': 'OK'})
-                soup = BeautifulSoup(r.text, features='html.parser')
-                data = [item.text for item in soup.select('td')]
-                keyword = ': '
-                before_keyword, keyword, after_keyword = data[1].partition(
-                    keyword)
+                text = Write.Input('    >> Escriba el mensaje que desea cifrar: ', Colors.light_gray, interval=0.01)
+            elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar' or encrypt == 'descifrar':
+                encrypt = 'decrypt'
                 print()
-                for i in range(len(data)):
-                    keyword = ': '
-                    before_keyword, keyword, after_keyword = data[i].partition(
-                        keyword)
-                    if color == 'yellow':
-                        print(Colors.yellow, f'[+{i+1}]:\t\t{after_keyword}')
-                    elif color == 'purple':
-                        print(Colors.purple, f'[+{i+1}]:\t\t{after_keyword}')
-                    elif color == 'light_green':
-                        print(Colors.light_green, f'[+{i+1}]:\t\t{after_keyword}')    
+                Dec = True
+                text = Write.Input('    >> Escriba el mensaje que desea descifrar: ', Colors.light_gray, interval=0.01)
+            else:
+                encrypt = 'encrypt'
                 print()
-                print()
-                Write.Input('    >> Pulsa enter para continuar: ',
-                            Colors.light_gray, interval=0.01)
-            except IndexError:
-                print()
-            num_function(6,'entitydec')
-            num(7)
-            num_function(8,'del33t')
-            num_function(9,'unigpay')
-            
-                
+                text = Write.Input('    >> Escriba el mensaje que desea cifrar: ', Colors.light_gray, interval=0.01)
+            print()
+            password = Write.Input('    >> Escriba una contraseña: ', Colors.light_gray, interval=0.01)
+        
+            func1(0, 'bin2asc', 'Binario')
+            func1(1, 'hex2asc', 'Hexadecimal')
+            func1(2, 'urldec', 'Cifrado URL')
+            func2(3, 'Texto al revés')
+            func1(4, 'b64dec', 'Base 64')
+            func3(5, 'Cifrado César')
+            func1(6, 'entitydec', 'Entidades HTML')
+            func2(7, 'Root 13')
+            func1(8, 'del33t', 'l33t 5p34k')
+            func1(9, 'unigpay', 'Pig Latin')
+              
             print()
             Write.Input('    >> Pulsa enter para continuar: ',
                         Colors.light_gray, interval=0.01)
