@@ -310,7 +310,7 @@ def config_main():
         storage = open('data.dll', 'w')
         storage.write(color_shade)
         storage.close()
-    if number == 2:
+    elif number == 2:
         exit()
 
 def num_function(numb, _dec):
