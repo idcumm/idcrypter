@@ -8,8 +8,7 @@ except (ImportError, ModuleNotFoundError):
     print('   >> Instalando dependencias...')
     os.sys('python -m pip install -r requirements.txt')
 
-def help():
-    print(Colorate.Vertical(Colors.purple_to_red, Center.Center('''                                                           
+print(Colorate.Vertical(Colors.purple_to_red, Center.Center('''                                                           
  ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
 ▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
 ▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
@@ -20,7 +19,8 @@ def help():
  ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
  ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
      ░      ░                 ░ ░                                       
-                                                                          ''')))
-input()
 
-help()
+
+
+''')))
+input()
