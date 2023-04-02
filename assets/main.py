@@ -8,7 +8,7 @@ except (ImportError, ModuleNotFoundError):
     input('\n   >> Por favor, presione Enter para continuar...')
 
 setTitle('Loading...')
-idcrypter()
+idcrypter_start()
 progress_bar(30, 0, 0.03)
 
 if __name__ == '__main__':
