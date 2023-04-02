@@ -128,7 +128,7 @@ def enc_options():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                             {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                  {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
+    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                             {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                  {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
 \n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Texto al revés                      {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Base 64                      {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado César
 \n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Entidades HTML                      {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Cifrado ROT-13               {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}l33t 5p34k
 \n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Pig Latin                           {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}AES                          {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}DES
@@ -139,7 +139,7 @@ def enc_options():
 \n\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-\n    {Colors.purple}[{Colors.light_gray}01{Colors.purple}] {Colors.white}Binario                             {Colors.purple}[{Colors.light_gray}02{Colors.purple}] {Colors.white}Hexadecimal                  {Colors.purple}[{Colors.light_gray}03{Colors.purple}] {Colors.white}Cifrado URL
+    {Colors.purple}[{Colors.light_gray}01{Colors.purple}] {Colors.white}Binario                             {Colors.purple}[{Colors.light_gray}02{Colors.purple}] {Colors.white}Hexadecimal                  {Colors.purple}[{Colors.light_gray}03{Colors.purple}] {Colors.white}Cifrado URL
 \n    {Colors.purple}[{Colors.light_gray}04{Colors.purple}] {Colors.white}Texto al revés                      {Colors.purple}[{Colors.light_gray}05{Colors.purple}] {Colors.white}Base 64                      {Colors.purple}[{Colors.light_gray}06{Colors.purple}] {Colors.white}Cifrado César
 \n    {Colors.purple}[{Colors.light_gray}07{Colors.purple}] {Colors.white}Entidades HTML                      {Colors.purple}[{Colors.light_gray}08{Colors.purple}] {Colors.white}Cifrado ROT-13               {Colors.purple}[{Colors.light_gray}09{Colors.purple}] {Colors.white}l33t 5p34k
 \n    {Colors.purple}[{Colors.light_gray}10{Colors.purple}] {Colors.white}Pig Latin                           {Colors.purple}[{Colors.light_gray}11{Colors.purple}] {Colors.white}AES                          {Colors.purple}[{Colors.light_gray}12{Colors.purple}] {Colors.white}DES
@@ -150,7 +150,7 @@ def enc_options():
 \n\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-\n    {Colors.light_green}[{Colors.light_gray}01{Colors.light_green}] {Colors.white}Binario                             {Colors.light_green}[{Colors.light_gray}02{Colors.light_green}] {Colors.white}Hexadecimal                  {Colors.light_green}[{Colors.light_gray}03{Colors.light_green}] {Colors.white}Cifrado URL
+    {Colors.light_green}[{Colors.light_gray}01{Colors.light_green}] {Colors.white}Binario                             {Colors.light_green}[{Colors.light_gray}02{Colors.light_green}] {Colors.white}Hexadecimal                  {Colors.light_green}[{Colors.light_gray}03{Colors.light_green}] {Colors.white}Cifrado URL
 \n    {Colors.light_green}[{Colors.light_gray}04{Colors.light_green}] {Colors.white}Texto al revés                      {Colors.light_green}[{Colors.light_gray}05{Colors.light_green}] {Colors.white}Base 64                      {Colors.light_green}[{Colors.light_gray}06{Colors.light_green}] {Colors.white}Cifrado César
 \n    {Colors.light_green}[{Colors.light_gray}07{Colors.light_green}] {Colors.white}Entidades HTML                      {Colors.light_green}[{Colors.light_gray}08{Colors.light_green}] {Colors.white}Cifrado ROT-13               {Colors.light_green}[{Colors.light_gray}09{Colors.light_green}] {Colors.white}l33t 5p34k
 \n    {Colors.light_green}[{Colors.light_gray}10{Colors.light_green}] {Colors.white}Pig Latin                           {Colors.light_green}[{Colors.light_gray}11{Colors.light_green}] {Colors.white}AES                          {Colors.light_green}[{Colors.light_gray}12{Colors.light_green}] {Colors.white}DES
@@ -165,7 +165,7 @@ def enc_options2():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-\n    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
+    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
 \n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Encriptación total
 \n
 \n
@@ -176,7 +176,7 @@ def enc_options2():
 \n\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-\n    {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                              {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                       {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
+    {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                              {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                       {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
 \n    {Colors.purple}[{Colors.light_gray}25{Colors.purple}] {Colors.white}Encriptación total
 \n
 \n
@@ -187,7 +187,7 @@ def enc_options2():
 \n\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-\n    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
+    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
 \n    {Colors.light_green}[{Colors.light_gray}25{Colors.light_green}] {Colors.white}Encriptación total
 \n
 \n
@@ -202,7 +202,7 @@ def config_options():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-    \n    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                     {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                         {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
+        {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                     {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                         {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
     \n
     \n
     \n
@@ -213,7 +213,7 @@ def config_options():
     \n\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-    \n    {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                     {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                         {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
+        {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                     {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                         {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
     \n
     \n
     \n
@@ -224,7 +224,7 @@ def config_options():
     \n\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-    \n    {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                     {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                         {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
+        {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                     {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                         {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
     \n
     \n
     \n

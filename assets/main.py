@@ -87,7 +87,7 @@ def __main__():
         elif number == 5:
             try:
                 text = Write.Input(
-                    '    >> Escriba el mensaje que desea encriptar/desencriptar: ', Colors.light_gray, interval=0.01)
+                    '    >> Escriba el mensaje que desea cifrar/descifrar: ', Colors.light_gray, interval=0.01)
                 print()
                 if text == '':
                     text = after_keyword
@@ -132,17 +132,17 @@ def __main__():
                     encrypt = 'encrypt'
                     print()
                     text = Write.Input(
-                            '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+                            '    >> Escriba el mensaje que desea cifrar: ', Colors.light_gray, interval=0.01)
                 elif encrypt == 'D' or encrypt == 'd' or encrypt == 'Descifrar':
                     encrypt = 'decrypt'
                     print()
                     text = Write.Input(
-                            '    >> Escriba el mensaje que desea desencriptar: ', Colors.light_gray, interval=0.01)
+                            '    >> Escriba el mensaje que desea descifrar: ', Colors.light_gray, interval=0.01)
                 else:
                     encrypt = 'encrypt'
                     print()
                     text = Write.Input(
-                            '    >> Escriba el mensaje que desea encriptar: ', Colors.light_gray, interval=0.01)
+                            '    >> Escriba el mensaje que desea cifrar: ', Colors.light_gray, interval=0.01)
                 print()
                 if text == '':
                     text = after_keyword
