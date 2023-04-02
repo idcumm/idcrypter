@@ -54,7 +54,7 @@ def __main__():
     global page
     global Dec
     print( Colors.light_gray, 
-        "    >> [#] Elección: ", end='')
+        "   >> [#] Elección: ", end='')
     number = input()
     try:
         number = int(number) - 1

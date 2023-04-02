@@ -83,32 +83,35 @@ def clear():
 def idcrypter():
     global color_shade
     if color_shade == 'yellow_to_red':
-        print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_red, """
-                               ____  ___      __  ____   __ __  ____  ______    ___  ____  
-                              l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
-                               |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
-                               |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
-                               |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
-                               j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
+        print(Colorate.Vertical(Colors.yellow_to_red, Center.XCenter("""
+ ____  ___      __  ____   __ __  ____  ______    ___  ____  
+l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
+ |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
+ |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
+ |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
+ j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
+|____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j
+""")))
     elif color_shade == 'purple_to_blue':
-        print(Center.XCenter(Colorate.Vertical(Colors.purple_to_blue, """
-                               ____  ___      __  ____   __ __  ____  ______    ___  ____  
-                              l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
-                               |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
-                               |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
-                               |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
-                               j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
+        print(Colorate.Vertical(Colors.purple_to_blue, Center.XCenter("""
+ ____  ___      __  ____   __ __  ____  ______    ___  ____  
+l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
+ |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
+ |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
+ |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
+ j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
+|____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j
+""")))
     elif color_shade == 'yellow_to_green':
-        print(Center.XCenter(Colorate.Vertical(Colors.yellow_to_green, """
-                               ____  ___      __  ____   __ __  ____  ______    ___  ____  
-                              l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
-                               |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
-                               |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
-                               |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
-                               j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
-                              |____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j\n""", 1)))
+        print(Colorate.Vertical(Colors.yellow_to_green, Center.XCenter("""
+ ____  ___      __  ____   __ __  ____  ______    ___  ____  
+l    j|   \    /  ]|    \ |  T  T|    \|      T  /  _]|    \ 
+ |  T |    \  /  / |  D  )|  |  ||  o  )      | /  [_ |  D  )
+ |  | |  D  Y/  /  |    / |  ~  ||   _/l_j  l_jY    _]|    / 
+ |  | |     /   \_ |    \ l___, ||  |    |  |  |   [_ |    \ 
+ j  l |     \     ||  .  Y|     !|  |    |  |  |     T|  .  Y
+|____jl_____j\____jl__j\_jl____/ l__j    l__j  l_____jl__j\_j
+""")))
 
 
 def enc_options():
