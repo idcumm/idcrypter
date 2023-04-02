@@ -175,37 +175,37 @@ def idcrypter():
 def enc_options():
     global color
     if color == 'yellow':
-        print(Center.XCenter(f"""
-    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                             {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                  {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
-\n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Texto al revés                      {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Base 64                      {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado César
-\n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Entidades HTML                      {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Cifrado ROT-13               {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}l33t 5p34k
-\n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Pig Latin                           {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}AES                          {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}DES
-\n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Rijndael 192                        {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}Rijndael 256                 {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}Serpent
-\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Triple DES                          {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}TwoFish                      {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Blowfish
-\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}CAST5                               {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}CAST6                        {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}GOST
-\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
+        print(Center.YCenter(f"""
+    {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                               {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                           {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
+\n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Texto al revés                        {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Base 64                               {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado César
+\n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Entidades HTML                        {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Cifrado ROT-13                        {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}l33t 5p34k
+\n    {Colors.yellow}[{Colors.light_gray}10{Colors.yellow}] {Colors.white}Pig Latin                             {Colors.yellow}[{Colors.light_gray}11{Colors.yellow}] {Colors.white}AES                                   {Colors.yellow}[{Colors.light_gray}12{Colors.yellow}] {Colors.white}DES
+\n    {Colors.yellow}[{Colors.light_gray}13{Colors.yellow}] {Colors.white}Rijndael 192                          {Colors.yellow}[{Colors.light_gray}14{Colors.yellow}] {Colors.white}Rijndael 256                          {Colors.yellow}[{Colors.light_gray}15{Colors.yellow}] {Colors.white}Serpent
+\n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Triple DES                            {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}TwoFish                               {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Blowfish
+\n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}CAST5                                 {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}CAST6                                 {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}GOST
+\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                         {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página                       {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-    {Colors.purple}[{Colors.light_gray}01{Colors.purple}] {Colors.white}Binario                             {Colors.purple}[{Colors.light_gray}02{Colors.purple}] {Colors.white}Hexadecimal                  {Colors.purple}[{Colors.light_gray}03{Colors.purple}] {Colors.white}Cifrado URL
-\n    {Colors.purple}[{Colors.light_gray}04{Colors.purple}] {Colors.white}Texto al revés                      {Colors.purple}[{Colors.light_gray}05{Colors.purple}] {Colors.white}Base 64                      {Colors.purple}[{Colors.light_gray}06{Colors.purple}] {Colors.white}Cifrado César
-\n    {Colors.purple}[{Colors.light_gray}07{Colors.purple}] {Colors.white}Entidades HTML                      {Colors.purple}[{Colors.light_gray}08{Colors.purple}] {Colors.white}Cifrado ROT-13               {Colors.purple}[{Colors.light_gray}09{Colors.purple}] {Colors.white}l33t 5p34k
-\n    {Colors.purple}[{Colors.light_gray}10{Colors.purple}] {Colors.white}Pig Latin                           {Colors.purple}[{Colors.light_gray}11{Colors.purple}] {Colors.white}AES                          {Colors.purple}[{Colors.light_gray}12{Colors.purple}] {Colors.white}DES
-\n    {Colors.purple}[{Colors.light_gray}13{Colors.purple}] {Colors.white}Rijndael 192                        {Colors.purple}[{Colors.light_gray}14{Colors.purple}] {Colors.white}Rijndael 256                 {Colors.purple}[{Colors.light_gray}15{Colors.purple}] {Colors.white}Serpent
-\n    {Colors.purple}[{Colors.light_gray}16{Colors.purple}] {Colors.white}Triple DES                          {Colors.purple}[{Colors.light_gray}17{Colors.purple}] {Colors.white}TwoFish                      {Colors.purple}[{Colors.light_gray}18{Colors.purple}] {Colors.white}Blowfish
-\n    {Colors.purple}[{Colors.light_gray}19{Colors.purple}] {Colors.white}CAST5                               {Colors.purple}[{Colors.light_gray}20{Colors.purple}] {Colors.white}CAST6                        {Colors.purple}[{Colors.light_gray}21{Colors.purple}] {Colors.white}GOST
-\n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                       {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página              {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
+    {Colors.purple}[{Colors.light_gray}01{Colors.purple}] {Colors.white}Binario                               {Colors.purple}[{Colors.light_gray}02{Colors.purple}] {Colors.white}Hexadecimal                           {Colors.purple}[{Colors.light_gray}03{Colors.purple}] {Colors.white}Cifrado URL
+\n    {Colors.purple}[{Colors.light_gray}04{Colors.purple}] {Colors.white}Texto al revés                        {Colors.purple}[{Colors.light_gray}05{Colors.purple}] {Colors.white}Base 64                               {Colors.purple}[{Colors.light_gray}06{Colors.purple}] {Colors.white}Cifrado César
+\n    {Colors.purple}[{Colors.light_gray}07{Colors.purple}] {Colors.white}Entidades HTML                        {Colors.purple}[{Colors.light_gray}08{Colors.purple}] {Colors.white}Cifrado ROT-13                        {Colors.purple}[{Colors.light_gray}09{Colors.purple}] {Colors.white}l33t 5p34k
+\n    {Colors.purple}[{Colors.light_gray}10{Colors.purple}] {Colors.white}Pig Latin                             {Colors.purple}[{Colors.light_gray}11{Colors.purple}] {Colors.white}AES                                   {Colors.purple}[{Colors.light_gray}12{Colors.purple}] {Colors.white}DES
+\n    {Colors.purple}[{Colors.light_gray}13{Colors.purple}] {Colors.white}Rijndael 192                          {Colors.purple}[{Colors.light_gray}14{Colors.purple}] {Colors.white}Rijndael 256                          {Colors.purple}[{Colors.light_gray}15{Colors.purple}] {Colors.white}Serpent
+\n    {Colors.purple}[{Colors.light_gray}16{Colors.purple}] {Colors.white}Triple DES                            {Colors.purple}[{Colors.light_gray}17{Colors.purple}] {Colors.white}TwoFish                               {Colors.purple}[{Colors.light_gray}18{Colors.purple}] {Colors.white}Blowfish
+\n    {Colors.purple}[{Colors.light_gray}19{Colors.purple}] {Colors.white}CAST5                                 {Colors.purple}[{Colors.light_gray}20{Colors.purple}] {Colors.white}CAST6                                 {Colors.purple}[{Colors.light_gray}21{Colors.purple}] {Colors.white}GOST
+\n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                         {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página                       {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
 \n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-    {Colors.light_green}[{Colors.light_gray}01{Colors.light_green}] {Colors.white}Binario                             {Colors.light_green}[{Colors.light_gray}02{Colors.light_green}] {Colors.white}Hexadecimal                  {Colors.light_green}[{Colors.light_gray}03{Colors.light_green}] {Colors.white}Cifrado URL
-\n    {Colors.light_green}[{Colors.light_gray}04{Colors.light_green}] {Colors.white}Texto al revés                      {Colors.light_green}[{Colors.light_gray}05{Colors.light_green}] {Colors.white}Base 64                      {Colors.light_green}[{Colors.light_gray}06{Colors.light_green}] {Colors.white}Cifrado César
-\n    {Colors.light_green}[{Colors.light_gray}07{Colors.light_green}] {Colors.white}Entidades HTML                      {Colors.light_green}[{Colors.light_gray}08{Colors.light_green}] {Colors.white}Cifrado ROT-13               {Colors.light_green}[{Colors.light_gray}09{Colors.light_green}] {Colors.white}l33t 5p34k
-\n    {Colors.light_green}[{Colors.light_gray}10{Colors.light_green}] {Colors.white}Pig Latin                           {Colors.light_green}[{Colors.light_gray}11{Colors.light_green}] {Colors.white}AES                          {Colors.light_green}[{Colors.light_gray}12{Colors.light_green}] {Colors.white}DES
-\n    {Colors.light_green}[{Colors.light_gray}13{Colors.light_green}] {Colors.white}Rijndael 192                        {Colors.light_green}[{Colors.light_gray}14{Colors.light_green}] {Colors.white}Rijndael 256                 {Colors.light_green}[{Colors.light_gray}15{Colors.light_green}] {Colors.white}Serpent
-\n    {Colors.light_green}[{Colors.light_gray}16{Colors.light_green}] {Colors.white}Triple DES                          {Colors.light_green}[{Colors.light_gray}17{Colors.light_green}] {Colors.white}TwoFish                      {Colors.light_green}[{Colors.light_gray}18{Colors.light_green}] {Colors.white}Blowfish
-\n    {Colors.light_green}[{Colors.light_gray}19{Colors.light_green}] {Colors.white}CAST5                               {Colors.light_green}[{Colors.light_gray}20{Colors.light_green}] {Colors.white}CAST6                        {Colors.light_green}[{Colors.light_gray}21{Colors.light_green}] {Colors.white}GOST
-\n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                       {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página              {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
+    {Colors.light_green}[{Colors.light_gray}01{Colors.light_green}] {Colors.white}Binario                               {Colors.light_green}[{Colors.light_gray}02{Colors.light_green}] {Colors.white}Hexadecimal                           {Colors.light_green}[{Colors.light_gray}03{Colors.light_green}] {Colors.white}Cifrado URL
+\n    {Colors.light_green}[{Colors.light_gray}04{Colors.light_green}] {Colors.white}Texto al revés                        {Colors.light_green}[{Colors.light_gray}05{Colors.light_green}] {Colors.white}Base 64                               {Colors.light_green}[{Colors.light_gray}06{Colors.light_green}] {Colors.white}Cifrado César
+\n    {Colors.light_green}[{Colors.light_gray}07{Colors.light_green}] {Colors.white}Entidades HTML                        {Colors.light_green}[{Colors.light_gray}08{Colors.light_green}] {Colors.white}Cifrado ROT-13                        {Colors.light_green}[{Colors.light_gray}09{Colors.light_green}] {Colors.white}l33t 5p34k
+\n    {Colors.light_green}[{Colors.light_gray}10{Colors.light_green}] {Colors.white}Pig Latin                             {Colors.light_green}[{Colors.light_gray}11{Colors.light_green}] {Colors.white}AES                                   {Colors.light_green}[{Colors.light_gray}12{Colors.light_green}] {Colors.white}DES
+\n    {Colors.light_green}[{Colors.light_gray}13{Colors.light_green}] {Colors.white}Rijndael 192                          {Colors.light_green}[{Colors.light_gray}14{Colors.light_green}] {Colors.white}Rijndael 256                          {Colors.light_green}[{Colors.light_gray}15{Colors.light_green}] {Colors.white}Serpent
+\n    {Colors.light_green}[{Colors.light_gray}16{Colors.light_green}] {Colors.white}Triple DES                            {Colors.light_green}[{Colors.light_gray}17{Colors.light_green}] {Colors.white}TwoFish                               {Colors.light_green}[{Colors.light_gray}18{Colors.light_green}] {Colors.white}Blowfish
+\n    {Colors.light_green}[{Colors.light_gray}19{Colors.light_green}] {Colors.white}CAST5                                 {Colors.light_green}[{Colors.light_gray}20{Colors.light_green}] {Colors.white}CAST6                                 {Colors.light_green}[{Colors.light_gray}21{Colors.light_green}] {Colors.white}GOST
+\n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                         {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página                       {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
 \n"""))
 
 
@@ -213,36 +213,36 @@ def enc_options2():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                              {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                       {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
+    {Colors.yellow}[{Colors.light_gray}22{Colors.yellow}] {Colors.white}Loki97                                {Colors.yellow}[{Colors.light_gray}23{Colors.yellow}] {Colors.white}Safer+                                {Colors.yellow}[{Colors.light_gray}24{Colors.yellow}] {Colors.white}XTEA
 \n    {Colors.yellow}[{Colors.light_gray}25{Colors.yellow}] {Colors.white}Encriptación total
 \n
 \n
 \n
 \n
 \n
-\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
+\n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                         {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página                       {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
 \n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-    {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                              {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                       {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
+    {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                                {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                                {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
 \n    {Colors.purple}[{Colors.light_gray}25{Colors.purple}] {Colors.white}Encriptación total
 \n
 \n
 \n
 \n
 \n
-\n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                       {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página              {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
+\n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                         {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página                       {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
 \n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
+    {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                                {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                                {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
 \n    {Colors.light_green}[{Colors.light_gray}25{Colors.light_green}] {Colors.white}Encriptación total
 \n
 \n
 \n
 \n
 \n
-\n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                       {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página              {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
+\n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                         {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página                       {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
 \n"""))
 
 
@@ -250,7 +250,7 @@ def config_options():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-        {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                     {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                         {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
+        {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                       {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                                  {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
     \n
     \n
     \n
@@ -261,7 +261,7 @@ def config_options():
     \n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-        {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                     {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                         {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
+        {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                       {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                                  {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
     \n
     \n
     \n
@@ -272,7 +272,7 @@ def config_options():
     \n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-        {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                     {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                         {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
+        {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                       {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                                  {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
     \n
     \n
     \n

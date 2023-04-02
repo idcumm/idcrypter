@@ -4,38 +4,45 @@
 try:
     from plugins import *
 except (ImportError, ModuleNotFoundError):
-    print('   >> Error al intentar importar las dependencias...')
-    print('\n   >> Verifique que el archivo plugins.py se encuentre en el directorio.')
-    input('\n   >> Por favor, presione Enter para salir...')
+    print('\n   >> Error al intentar importar las dependencias...')
+    print('   >> Verifique que el archivo plugins.py se encuentre en el directorio.')
+    input('   >> Por favor, presione Enter para salir...')
     exit()
 
 setTitle('Loading...')
 idcrypter_start()
 sleep(1)
 
+print(Colors.light_gray, f'   >> Intentando establecer {__name__}.py como archivo principal...')
 if __name__ == '__main__':
-    print(Colors.white, f'\n\n    >> Conexión con el archivo {__name__}.py establecida...')
-print(Colors.white, '   >> Intentando establecer la conexión con el servidor...')
+    print(Colors.green, f'   >> Archivo {__name__}.py establecido correctamente como archivo principal...')
+else:
+    print(Colors.red, f'   >> No se ha podido establecer {__name__}.py como archivo principal...')
+
+print(Colors.light_gray, f'   >> Intentando establecer la conexión con {url}...')
 while True:
     try:
         requests.get(url)
         print(Colors.green,
               f'   >> [{requests.get(url).status_code}] Conexión con "{url}" establecida.')
-        while True:
-            try:
-                requests.get(url2)
-                print(Colors.green,
-                      f'   >> [{requests.get(url2).status_code}] Conexión con "{url2}" establecida.')
-                break
-            except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
-                print(Colors.red,
-                      f'   >> [404] Error de conexión con {url2}. Reintentando Conexión en 10 segundos...')
-                sleep(10)
         break
     except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
         print(Colors.red,
-              f'   >> [404] Error de conexión con {url}. Reintentando Conexión en 10 segundos...')
+              f'   >> [404] Error de conexión con {url}. Reintentando conexión en 10 segundos...')
         sleep(10)
+
+print(Colors.light_gray, f'   >> Intentando establecer la conexión con "{url2}"...')
+while True:
+    try:
+        requests.get(url2)
+        print(Colors.green,
+                f'   >> [{requests.get(url2).status_code}] Conexión con "{url2}" establecida.')
+        break
+    except (ConnectionError, ConnectionAbortedError, ConnectionRefusedError, ConnectionResetError, Exception):
+        print(Colors.red,
+                f'   >> [404] Error de conexión con {url2}. Reintentando conexión en 10 segundos...')
+        sleep(10)
+
 clear()
 setTitle('idcrypter')
 idcrypter()
