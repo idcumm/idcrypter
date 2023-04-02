@@ -311,7 +311,7 @@ def config_main():
         storage.write(color_shade)
         storage.close()
     if number == 2:
-        os.system('exit')
+        exit()
 
 def num_function(numb, _dec):
     global after_keyword

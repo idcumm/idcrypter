@@ -6,11 +6,11 @@ try:
 except (ImportError, ModuleNotFoundError):
     print('   >> Error al intentar importar las dependencias...')
     print('\n   >> Verifique que el archivo plugins.py se encuentre en el directorio.')
-    input('\n   >> Por favor, presione Enter para continuar...')
+    input('\n   >> Por favor, presione Enter para salir...')
+    exit()
 
 setTitle('Loading...')
 idcrypter_start()
-# progress_bar(30, 0, 0.03)
 sleep(1)
 
 if __name__ == '__main__':
