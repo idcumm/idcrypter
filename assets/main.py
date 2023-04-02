@@ -1,5 +1,6 @@
 # Fer tots a la vegada
 # Fer servir Install Forge en comptes de pyinstaller
+# Centrar tot
 try:
     from plugins import *
 except (ImportError, ModuleNotFoundError):
@@ -39,6 +40,87 @@ setTitle('idcrypter')
 idcrypter()
 enc_options()
 
+def func1(_numb, _type, _name):
+    global number
+    global url
+    global enc_types
+    global soup
+    global text
+    try: 
+        if text == '':
+            text = after_keyword
+        if Dec == True:
+            r = requests.post(url, data={'text': text, 'cryptmethod': _type, 'submit': 'OK'})
+        else:
+            r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})  
+        soup = BeautifulSoup(r.text, features='html.parser')
+        data = [item.text for item in soup.select('p')]
+        keyword = 'TEXTO PROCESADO:'
+        before_keyword, keyword, after_keyword = data[1].partition(keyword)
+        if color == 'yellow':
+            print(Colors.yellow, f'\n    {_name}: {after_keyword}')
+        elif color == 'purple':
+            print(Colors.purple, f'\n    {_name}: {after_keyword}')
+        elif color == 'light_green':
+            print(Colors.light_green, f'\n    {_name}: {after_keyword}')
+    except IndexError:
+        print()
+        
+def func2(_numb, _name):
+    global number
+    global url
+    global enc_types
+    global soup
+    global text
+    try:
+        if text == '':
+            text = after_keyword
+        r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})  
+        soup = BeautifulSoup(r.text, features='html.parser')
+        data = [item.text for item in soup.select('p')]
+        keyword = 'TEXTO PROCESADO:'
+        before_keyword, keyword, after_keyword = data[1].partition(
+        keyword)
+        if color == 'yellow':
+            print(Colors.yellow, f'\n    {_name}: {after_keyword}')
+        elif color == 'purple':
+            print(Colors.purple, f'\n    {_name}: {after_keyword}')
+        elif color == 'light_green':
+            print(Colors.light_green, f'\n    {_name}: {after_keyword}')
+    except IndexError:
+        print()
+        
+def func3(_numb, _name):
+    global number
+    global url
+    global enc_types
+    global soup
+    global text
+    try:
+        if text == '':
+            text = after_keyword
+        r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})
+        soup = BeautifulSoup(r.text, features='html.parser')
+        data = [item.text for item in soup.select('td')]
+        keyword = ': '
+        before_keyword, keyword, after_keyword = data[1].partition(keyword)
+        if color == 'yellow':
+            print(Colors.yellow, f'\n    {_name}: ')
+        elif color == 'purple':
+            print(Colors.purple, f'\n    {_name}: ')
+        elif color == 'light_green':
+            print(Colors.light_green, f'\n    {_name}: ')
+        for i in range(len(data)):
+            keyword = ': '
+            before_keyword, keyword, after_keyword = data[i].partition(keyword)
+            if color == 'yellow':
+                print(Colors.yellow, f'    [+{i+1}]:\t\t{after_keyword}')
+            elif color == 'purple':
+                print(Colors.purple, f'    [+{i+1}]:\t\t{after_keyword}')
+            elif color == 'light_green':
+                print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')    
+    except IndexError:
+         print()
 
 def __main__():
     global number

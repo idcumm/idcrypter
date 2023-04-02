@@ -17,7 +17,6 @@ url = 'https://superpatanegra.com/texto/index.php'
 url2 = 'https://cifraronline.com/pad'
 enc_types = ['asc2bin', 'asc2hex', 'urlenc', 'backwards', 'b64enc', 'caesarbf', 'entityenc', 'rot-13', 'l33t', 'igpay']
 enc_types2 = ['aes', 'des', 'rijndael192', 'rijndael256', 'serpent', 'tripledes', 'twofish', 'blowfish', 'cast5', 'cast6', 'gost', 'loki97', 'saferplus', 'xtea']
-text = ''
 after_keyword = ''
 soup = ''
 page = 1
@@ -93,6 +92,10 @@ def idcrypter_start():
  ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
  ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
      ░      ░                 ░ ░                                       
+
+
+
+
 """)))
     elif color_shade == 'purple_to_blue':
         print(Colorate.Vertical(Colors.purple_to_blue, Center.Center("""
@@ -106,6 +109,10 @@ def idcrypter_start():
  ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
  ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
      ░      ░                 ░ ░                                       
+
+
+
+
 """)))
     elif color_shade == 'yellow_to_green':
         print(Colorate.Vertical(Colors.yellow_to_green, Center.Center("""
@@ -119,13 +126,16 @@ def idcrypter_start():
  ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
  ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
      ░      ░                 ░ ░                                       
+
+
+
+
 """)))
 
-def idcrypter(_h):
+def idcrypter():
     global color_shade
-    print()
     if color_shade == 'yellow_to_red':
-        print(Colorate.Vertical(Colors.yellow_to_red, Center.Center("""
+        print(Colorate.Vertical(Colors.yellow_to_red, Center.XCenter("""
  ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
 ▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
 ▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
@@ -177,7 +187,7 @@ def enc_options():
 \n    {Colors.yellow}[{Colors.light_gray}16{Colors.yellow}] {Colors.white}Triple DES                          {Colors.yellow}[{Colors.light_gray}17{Colors.yellow}] {Colors.white}TwoFish                      {Colors.yellow}[{Colors.light_gray}18{Colors.yellow}] {Colors.white}Blowfish
 \n    {Colors.yellow}[{Colors.light_gray}19{Colors.yellow}] {Colors.white}CAST5                               {Colors.yellow}[{Colors.light_gray}20{Colors.yellow}] {Colors.white}CAST6                        {Colors.yellow}[{Colors.light_gray}21{Colors.yellow}] {Colors.white}GOST
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
     {Colors.purple}[{Colors.light_gray}01{Colors.purple}] {Colors.white}Binario                             {Colors.purple}[{Colors.light_gray}02{Colors.purple}] {Colors.white}Hexadecimal                  {Colors.purple}[{Colors.light_gray}03{Colors.purple}] {Colors.white}Cifrado URL
@@ -188,7 +198,7 @@ def enc_options():
 \n    {Colors.purple}[{Colors.light_gray}16{Colors.purple}] {Colors.white}Triple DES                          {Colors.purple}[{Colors.light_gray}17{Colors.purple}] {Colors.white}TwoFish                      {Colors.purple}[{Colors.light_gray}18{Colors.purple}] {Colors.white}Blowfish
 \n    {Colors.purple}[{Colors.light_gray}19{Colors.purple}] {Colors.white}CAST5                               {Colors.purple}[{Colors.light_gray}20{Colors.purple}] {Colors.white}CAST6                        {Colors.purple}[{Colors.light_gray}21{Colors.purple}] {Colors.white}GOST
 \n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                       {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página              {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
     {Colors.light_green}[{Colors.light_gray}01{Colors.light_green}] {Colors.white}Binario                             {Colors.light_green}[{Colors.light_gray}02{Colors.light_green}] {Colors.white}Hexadecimal                  {Colors.light_green}[{Colors.light_gray}03{Colors.light_green}] {Colors.white}Cifrado URL
@@ -199,7 +209,7 @@ def enc_options():
 \n    {Colors.light_green}[{Colors.light_gray}16{Colors.light_green}] {Colors.white}Triple DES                          {Colors.light_green}[{Colors.light_gray}17{Colors.light_green}] {Colors.white}TwoFish                      {Colors.light_green}[{Colors.light_gray}18{Colors.light_green}] {Colors.white}Blowfish
 \n    {Colors.light_green}[{Colors.light_gray}19{Colors.light_green}] {Colors.white}CAST5                               {Colors.light_green}[{Colors.light_gray}20{Colors.light_green}] {Colors.white}CAST6                        {Colors.light_green}[{Colors.light_gray}21{Colors.light_green}] {Colors.white}GOST
 \n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                       {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página              {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
 
 
 def enc_options2():
@@ -214,7 +224,7 @@ def enc_options2():
 \n
 \n
 \n    {Colors.yellow}[{Colors.light_gray}0{Colors.yellow}]  {Colors.light_gray}Configuración                       {Colors.yellow}[{Colors.light_gray}<{Colors.yellow}]  {Colors.light_gray}Anterior Página              {Colors.yellow}[{Colors.light_gray}>{Colors.yellow}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
     {Colors.purple}[{Colors.light_gray}22{Colors.purple}] {Colors.white}Loki97                              {Colors.purple}[{Colors.light_gray}23{Colors.purple}] {Colors.white}Safer+                       {Colors.purple}[{Colors.light_gray}24{Colors.purple}] {Colors.white}XTEA
@@ -225,7 +235,7 @@ def enc_options2():
 \n
 \n
 \n    {Colors.purple}[{Colors.light_gray}0{Colors.purple}]  {Colors.light_gray}Configuración                       {Colors.purple}[{Colors.light_gray}<{Colors.purple}]  {Colors.light_gray}Anterior Página              {Colors.purple}[{Colors.light_gray}>{Colors.purple}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
     {Colors.light_green}[{Colors.light_gray}22{Colors.light_green}] {Colors.white}Loki97                              {Colors.light_green}[{Colors.light_gray}23{Colors.light_green}] {Colors.white}Safer+                       {Colors.light_green}[{Colors.light_gray}24{Colors.light_green}] {Colors.white}XTEA
@@ -236,7 +246,7 @@ def enc_options2():
 \n
 \n
 \n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                       {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página              {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
-\n\n"""))
+\n"""))
 
 
 def config_options():
@@ -251,7 +261,7 @@ def config_options():
     \n
     \n
     \n
-    \n\n"""))
+    \n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
         {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                     {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                         {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
@@ -262,7 +272,7 @@ def config_options():
     \n
     \n
     \n
-    \n\n"""))
+    \n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
         {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                     {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                         {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
@@ -273,7 +283,7 @@ def config_options():
     \n
     \n
     \n
-    \n\n"""))
+    \n"""))
 
 
 def config_main():
@@ -408,106 +418,3 @@ def num(numb):
                     Colors.light_gray, interval=0.01)
     except IndexError:
         print()
-        
-def func1(_numb, _type, _name):
-    global number
-    global color_shade
-    global color
-    global url
-    global url2
-    global enc_types
-    global enc_types2
-    global text
-    global after_keyword
-    global soup
-    global page
-    global Dec
-    try: 
-        if text == '':
-            text = after_keyword
-        if Dec == True:
-            r = requests.post(url, data={'text': text, 'cryptmethod': _type, 'submit': 'OK'})
-        else:
-            r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})  
-        soup = BeautifulSoup(r.text, features='html.parser')
-        data = [item.text for item in soup.select('p')]
-        keyword = 'TEXTO PROCESADO:'
-        before_keyword, keyword, after_keyword = data[1].partition(keyword)
-        if color == 'yellow':
-            print(Colors.yellow, f'\n    {_name}: {after_keyword}')
-        elif color == 'purple':
-            print(Colors.purple, f'\n    {_name}: {after_keyword}')
-        elif color == 'light_green':
-            print(Colors.light_green, f'\n    {_name}: {after_keyword}')
-    except IndexError:
-        print()
-        
-def func2(_numb, _name):
-    global number
-    global color_shade
-    global color
-    global url
-    global url2
-    global enc_types
-    global enc_types2
-    global text
-    global after_keyword
-    global soup
-    global page
-    global Dec
-    try:
-        if text == '':
-            text = after_keyword
-        r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})  
-        soup = BeautifulSoup(r.text, features='html.parser')
-        data = [item.text for item in soup.select('p')]
-        keyword = 'TEXTO PROCESADO:'
-        before_keyword, keyword, after_keyword = data[1].partition(
-        keyword)
-        if color == 'yellow':
-            print(Colors.yellow, f'\n    {_name}: {after_keyword}')
-        elif color == 'purple':
-            print(Colors.purple, f'\n    {_name}: {after_keyword}')
-        elif color == 'light_green':
-            print(Colors.light_green, f'\n    {_name}: {after_keyword}')
-    except IndexError:
-        print()
-        
-def func3(_numb, _name):
-    global number
-    global color_shade
-    global color
-    global url
-    global url2
-    global enc_types
-    global enc_types2
-    global text
-    global after_keyword
-    global soup
-    global page
-    global Dec
-    try:
-        if text == '':
-            text = after_keyword
-        r = requests.post(url, data={'text': text, 'cryptmethod': enc_types[_numb], 'submit': 'OK'})
-        soup = BeautifulSoup(r.text, features='html.parser')
-        data = [item.text for item in soup.select('td')]
-        keyword = ': '
-        before_keyword, keyword, after_keyword = data[1].partition(keyword)
-        if color == 'yellow':
-            print(Colors.yellow, f'\n    {_name}: ')
-        elif color == 'purple':
-            print(Colors.purple, f'\n    {_name}: ')
-        elif color == 'light_green':
-            print(Colors.light_green, f'\n    {_name}: ')
-        for i in range(len(data)):
-            keyword = ': '
-            before_keyword, keyword, after_keyword = data[i].partition(keyword)
-            if color == 'yellow':
-                print(Colors.yellow, f'    [+{i+1}]:\t\t{after_keyword}')
-            elif color == 'purple':
-                print(Colors.purple, f'    [+{i+1}]:\t\t{after_keyword}')
-            elif color == 'light_green':
-                print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')    
-    except IndexError:
-         print()
