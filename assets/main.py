@@ -10,7 +10,8 @@ except (ImportError, ModuleNotFoundError):
 
 setTitle('Loading...')
 idcrypter_start()
-progress_bar(30, 0, 0.03)
+# progress_bar(30, 0, 0.03)
+sleep(1)
 
 if __name__ == '__main__':
     print(Colors.white, f'\n\n    >> Conexión con el archivo {__name__}.py establecida...')

@@ -95,7 +95,6 @@ def idcrypter_start():
 
 
 
-
 """)))
     elif color_shade == 'purple_to_blue':
         print(Colorate.Vertical(Colors.purple_to_blue, Center.Center("""
@@ -112,7 +111,6 @@ def idcrypter_start():
 
 
 
-
 """)))
     elif color_shade == 'yellow_to_green':
         print(Colorate.Vertical(Colors.yellow_to_green, Center.Center("""
@@ -126,7 +124,6 @@ def idcrypter_start():
  ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
  ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
      ░      ░                 ░ ░                                       
-
 
 
 
