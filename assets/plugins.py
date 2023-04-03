@@ -3,12 +3,13 @@ try:
     import requests, sys, ctypes, warnings
     from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
     from time import sleep
-    from pystyle import Colors, Colorate, Write, Center
+    from pystyle import Colors, Colorate, Write, Center, Anime, System
 except (ImportError, ModuleNotFoundError):
     print('   >> Instalando dependencias...')
     os.sys('python -m pip install -r requirements.txt')
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
+System.Size(120, 30)
 
 number = 0
 color_shade = 'yellow_to_red'
@@ -78,104 +79,39 @@ def clear():
         print('\n'*120)
     return
 
+banner = ''' ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
+▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
+▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
+░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
+░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
+░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
+ ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
+ ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
+ ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
+     ░      ░                 ░ ░'''
+
 def idcrypter_start():
     global color_shade
     if color_shade == 'yellow_to_red':
-        print(Colorate.Vertical(Colors.yellow_to_red, Center.Center("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-
-
-
-""")))
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_red, Colorate.Vertical, time=2)
     elif color_shade == 'purple_to_blue':
-        print(Colorate.Vertical(Colors.purple_to_blue, Center.Center("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-
-
-
-""")))
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.purple_to_blue, Colorate.Vertical, time=2)
     elif color_shade == 'yellow_to_green':
-        print(Colorate.Vertical(Colors.yellow_to_green, Center.Center("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-
-
-
-""")))
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_green, Colorate.Vertical, time=2)
 
 def idcrypter():
     global color_shade
     if color_shade == 'yellow_to_red':
-        print(Colorate.Vertical(Colors.yellow_to_red, Center.XCenter("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-""")))
+        print(Colorate.Vertical(Colors.yellow_to_red, Center.XCenter(f'\n{banner}\n')))
     elif color_shade == 'purple_to_blue':
-        print(Colorate.Vertical(Colors.purple_to_blue, Center.XCenter("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-""")))
+        print(Colorate.Vertical(Colors.purple_to_blue, Center.XCenter(f'\n{banner}\n')))
     elif color_shade == 'yellow_to_green':
-        print(Colorate.Vertical(Colors.yellow_to_green, Center.XCenter("""
- ██▓▓█████▄  ▄████▄   ██▀███ ▓██   ██▓ ██▓███  ▄▄▄█████▓▓█████  ██▀███  
-▓██▒▒██▀ ██▌▒██▀ ▀█  ▓██ ▒ ██▒▒██  ██▒▓██░  ██▒▓  ██▒ ▓▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒░██   █▌▒▓█    ▄ ▓██ ░▄█ ▒ ▒██ ██░▓██░ ██▓▒▒ ▓██░ ▒░▒███   ▓██ ░▄█ ▒
-░██░░▓█▄   ▌▒▓▓▄ ▄██▒▒██▀▀█▄   ░ ▐██▓░▒██▄█▓▒ ▒░ ▓██▓ ░ ▒▓█  ▄ ▒██▀▀█▄  
-░██░░▒████▓ ▒ ▓███▀ ░░██▓ ▒██▒ ░ ██▒▓░▒██▒ ░  ░  ▒██▒ ░ ░▒████▒░██▓ ▒██▒
-░▓   ▒▒▓  ▒ ░ ░▒ ▒  ░░ ▒▓ ░▒▓░  ██▒▒▒ ▒▓▒░ ░  ░  ▒ ░░   ░░ ▒░ ░░ ▒▓ ░▒▓░
- ▒ ░ ░ ▒  ▒   ░  ▒     ░▒ ░ ▒░▓██ ░▒░ ░▒ ░         ░     ░ ░  ░  ░▒ ░ ▒░
- ▒ ░ ░ ░  ░ ░          ░░   ░ ▒ ▒ ░░  ░░         ░         ░     ░░   ░ 
- ░     ░    ░ ░         ░     ░ ░                          ░  ░   ░     
-     ░      ░                 ░ ░                                       
-""")))
-
+        print(Colorate.Vertical(Colors.yellow_to_green, Center.XCenter(f'\n{banner}\n')))
 
 def enc_options():
     global color
     if color == 'yellow':
-        print(Center.YCenter(f"""
+        print(Center.XCenter(f"""
     {Colors.yellow}[{Colors.light_gray}01{Colors.yellow}] {Colors.white}Binario                               {Colors.yellow}[{Colors.light_gray}02{Colors.yellow}] {Colors.white}Hexadecimal                           {Colors.yellow}[{Colors.light_gray}03{Colors.yellow}] {Colors.white}Cifrado URL
 \n    {Colors.yellow}[{Colors.light_gray}04{Colors.yellow}] {Colors.white}Texto al revés                        {Colors.yellow}[{Colors.light_gray}05{Colors.yellow}] {Colors.white}Base 64                               {Colors.yellow}[{Colors.light_gray}06{Colors.yellow}] {Colors.white}Cifrado César
 \n    {Colors.yellow}[{Colors.light_gray}07{Colors.yellow}] {Colors.white}Entidades HTML                        {Colors.yellow}[{Colors.light_gray}08{Colors.yellow}] {Colors.white}Cifrado ROT-13                        {Colors.yellow}[{Colors.light_gray}09{Colors.yellow}] {Colors.white}l33t 5p34k

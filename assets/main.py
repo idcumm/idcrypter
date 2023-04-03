@@ -1,6 +1,7 @@
 # Fer tots a la vegada
 # Fer servir Install Forge en comptes de pyinstaller
 # Centrar tot
+# Pantalla de carga
 try:
     from plugins import *
 except (ImportError, ModuleNotFoundError):
@@ -11,8 +12,9 @@ except (ImportError, ModuleNotFoundError):
 
 setTitle('Loading...')
 idcrypter_start()
-sleep(1)
+sleep(0.5)
 
+print('\n\n\n\n\n\n\n\n\n\n\n')
 print(Colors.light_gray, f'   >> Intentando establecer {__name__}.py como archivo principal...')
 if __name__ == '__main__':
     print(Colors.green, f'   >> Archivo {__name__}.py establecido correctamente como archivo principal...')
