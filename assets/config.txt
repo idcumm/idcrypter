@@ -1,3 +1,3 @@
-purple_to_blue
+yellow_to_red
 120
 30
