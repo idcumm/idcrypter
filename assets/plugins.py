@@ -101,11 +101,11 @@ banner = ''' ██▓▓█████▄  ▄████▄   ██▀█�
 def idcrypter_start():
     global color_shade
     if color_shade == 'yellow_to_red':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_red, Colorate.Vertical, time=2)
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_red, Colorate.Vertical, time=1)
     elif color_shade == 'purple_to_blue':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.purple_to_blue, Colorate.Vertical, time=2)
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.purple_to_blue, Colorate.Vertical, time=1)
     elif color_shade == 'yellow_to_green':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_green, Colorate.Vertical, time=2)
+        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_green, Colorate.Vertical, time=1)
 
 def idcrypter():
     global color_shade
