@@ -8,8 +8,19 @@ except (ImportError, ModuleNotFoundError):
     print('   >> Instalando dependencias...')
     os.sys('python -m pip install -r requirements.txt')
 
+f = open('config.txt', 'r')
+lines = f.readlines()
+for i in range(len(lines)):
+    lines[i] = lines[i].replace('\n', '')
+color_shade = lines[0]
+x = lines[1]
+y = lines[2]
+f.close()
+
+if not x == 120 and y == 30:
+    System.Size(x, y)
+
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
-System.Size(120, 30)
 
 number = 0
 color_shade = 'yellow_to_red'
@@ -23,9 +34,6 @@ soup = ''
 page = 1
 Dec = False
 
-extract = open('data.dll', 'r')
-if extract.mode == 'r':
-    color_shade = extract.read()
 if color_shade == 'yellow_to_red':
     color = 'yellow'
 elif color_shade == 'purple_to_blue':
@@ -186,37 +194,37 @@ def config_options():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-        {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                       {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Test                                  {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n"""))
+    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                       {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Resolución                            {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-        {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                       {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Test                                  {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n"""))
+    {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                       {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Resolución                            {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-        {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                       {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Test                                  {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n
-    \n"""))
+    {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                       {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Resolución                            {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n"""))
 
 
 def config_main():
@@ -243,9 +251,26 @@ def config_main():
         if number == 2:
             color_shade = 'yellow_to_green'
             color = 'light_green'
-        storage = open('data.dll', 'w')
-        storage.write(color_shade)
-        storage.close()
+        f = open('config.txt', 'r')
+        lines = f.readlines()
+        f = open('config.txt', 'w')
+        lines[0] = f'{color_shade}\n'
+        f.writelines(lines)
+        f.close()
+    elif number == 1:
+        print(Colors.light_gray, '\n     >> (Default = 120) x = ', end='')
+        x = input()
+        print(Colors.light_gray, '\n     >> (Default = 30) y = ', end='')
+        y = input()
+        
+        f = open('config.txt', 'r')
+        lines = f.readlines()
+        f = open('config.txt', 'w')
+        lines[1] = f'{x}\n'
+        lines[2] = f'{y}\n'
+        f.writelines(lines)
+        f.close()
+        System.Size(x, y)
     elif number == 2:
         exit()
 

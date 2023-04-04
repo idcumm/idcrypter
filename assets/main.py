@@ -1,7 +1,11 @@
 # Fer tots a la vegada
 # Fer servir Install Forge en comptes de pyinstaller
 # Centrar tot
-# Pantalla de carga
+# Arreglar pantalla de carga
+# Arreglar pujar pantalla
+# Afegir explicacions a data (theme = 'yellow_to_red')
+# Afegir tema purple_to_red
+
 try:
     from plugins import *
 except (ImportError, ModuleNotFoundError):
