@@ -12,9 +12,9 @@ f = open('config.txt', 'r')
 lines = f.readlines()
 for i in range(len(lines)):
     lines[i] = lines[i].replace('\n', '')
-color_shade = lines[0]
-x = lines[1]
-y = lines[2]
+color_shade = lines[0][9:-1]
+x = lines[1][5:-1]
+y = lines[2][5:-1]
 f.close()
 
 if not x == 120 and y == 30:
@@ -254,7 +254,7 @@ def config_main():
         f = open('config.txt', 'r')
         lines = f.readlines()
         f = open('config.txt', 'w')
-        lines[0] = f'{color_shade}\n'
+        lines[0] = f'theme = "{color_shade}"\n'
         f.writelines(lines)
         f.close()
     elif number == 1:
@@ -266,8 +266,8 @@ def config_main():
         f = open('config.txt', 'r')
         lines = f.readlines()
         f = open('config.txt', 'w')
-        lines[1] = f'{x}\n'
-        lines[2] = f'{y}\n'
+        lines[1] = f'x = "{x}"\n'
+        lines[2] = f'y = "{y}"\n'
         f.writelines(lines)
         f.close()
         System.Size(x, y)
