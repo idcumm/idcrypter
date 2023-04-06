@@ -240,6 +240,9 @@ def config_main():
         print()
         Write.Print(
             '              [3] Nature', Colors.light_green, interval=0.01)
+        print()
+        Write.Print(
+            '              [4] Blood', Colors.light_red, interval=0.01)
         print('\n')
         eleccion()
         if number == 0:
@@ -251,6 +254,9 @@ def config_main():
         if number == 2:
             color_shade = 'yellow_to_green'
             color = 'light_green'
+        if number == 3:
+            color_shade = 'purple_to_red'
+            color = 'light_red'
         f = open('config.txt', 'r')
         lines = f.readlines()
         f = open('config.txt', 'w')
