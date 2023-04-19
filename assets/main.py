@@ -17,7 +17,7 @@ except (ImportError, ModuleNotFoundError):
 
 setTitle('Loading...')
 idcrypter_start()
-sleep(0.5)
+sleep(2)
 
 print('\n\n\n\n\n\n\n\n\n\n\n')
 print(Colors.light_gray, f'   >> Intentando establecer {__name__}.py como archivo principal...')
@@ -78,6 +78,8 @@ def func1(_numb, _type, _name):
             print(Colors.purple, f'\n    {_name}: {after_keyword}')
         elif color == 'light_green':
             print(Colors.light_green, f'\n    {_name}: {after_keyword}')
+        elif color == 'light_red':
+            print(Colors.light_red, f'\n    {_name}: {after_keyword}')
     except IndexError:
         print()
         
@@ -125,6 +127,8 @@ def func3(_numb, _name):
             print(Colors.purple, f'\n    {_name}: ')
         elif color == 'light_green':
             print(Colors.light_green, f'\n    {_name}: ')
+        elif color == 'light_red':
+            print(Colors.light_red, f'\n    {_name}: ')
         for i in range(len(data)):
             keyword = ': '
             before_keyword, keyword, after_keyword = data[i].partition(keyword)
@@ -133,7 +137,9 @@ def func3(_numb, _name):
             elif color == 'purple':
                 print(Colors.purple, f'    [+{i+1}]:\t\t{after_keyword}')
             elif color == 'light_green':
-                print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')    
+                print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')
+            elif color == 'light_red':
+                print(Colors.light_red, f'    [+{i+1}]:\t\t{after_keyword}')  
     except IndexError:
          print()
 
@@ -205,7 +211,9 @@ def __main__():
                     elif color == 'purple':
                         print(Colors.purple, f'    [+{i+1}]:\t\t{after_keyword}')
                     elif color == 'light_green':
-                        print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')    
+                        print(Colors.light_green, f'    [+{i+1}]:\t\t{after_keyword}')
+                    elif color == 'light_red':
+                        print(Colors.light_red, f'    [+{i+1}]:\t\t{after_keyword}')
                 print()
                 print()
                 Write.Input('    >> Pulsa enter para continuar: ',
@@ -258,6 +266,9 @@ def __main__():
                 elif color == 'light_green':
                     Write.Print(f"""    {soup}
                          """, Colors.light_green, interval=0.001)
+                elif color == 'light_red':
+                    Write.Print(f"""    {soup}
+                         """, Colors.light_red, interval=0.001)
                 print()
                 Write.Input('    >> Pulsa enter para continuar: ',
                             Colors.light_gray, interval=0.01)

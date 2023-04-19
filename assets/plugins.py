@@ -8,6 +8,11 @@ except (ImportError, ModuleNotFoundError):
     print('   >> Instalando dependencias...')
     os.sys('python -m pip install -r requirements.txt')
 
+color_shade = 'yellow_to_red'
+color = 'yellow'
+x = 120
+y = 30
+
 f = open('config.txt', 'r')
 lines = f.readlines()
 for i in range(len(lines)):
@@ -23,8 +28,6 @@ if not x == 120 and y == 30:
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 number = 0
-color_shade = 'yellow_to_red'
-color = 'yellow'
 url = 'https://superpatanegra.com/texto/index.php'
 url2 = 'https://cifraronline.com/pad'
 enc_types = ['asc2bin', 'asc2hex', 'urlenc', 'backwards', 'b64enc', 'caesarbf', 'entityenc', 'rot-13', 'l33t', 'igpay']
@@ -40,6 +43,8 @@ elif color_shade == 'purple_to_blue':
     color = 'purple'
 elif color_shade == 'yellow_to_green':
     color = 'light_green'
+elif color_shade == 'purple_to_red':
+    color = 'light_red'
 
 def eleccion():
     global number
@@ -101,11 +106,13 @@ banner = ''' ██▓▓█████▄  ▄████▄   ██▀█�
 def idcrypter_start():
     global color_shade
     if color_shade == 'yellow_to_red':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_red, Colorate.Vertical, time=1)
+        print(Colorate.Vertical(Colors.yellow_to_red, Center.Center(f'\n{banner}\n')))
     elif color_shade == 'purple_to_blue':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.purple_to_blue, Colorate.Vertical, time=1)
+        print(Colorate.Vertical(Colors.purple_to_blue, Center.Center(f'\n{banner}\n')))
     elif color_shade == 'yellow_to_green':
-        Anime.Fade(Center.Center(f'\n{banner}\n\n\n\n'), Colors.yellow_to_green, Colorate.Vertical, time=1)
+        print(Colorate.Vertical(Colors.yellow_to_green, Center.Center(f'\n{banner}\n')))
+    elif color_shade == 'purple_to_red':
+        print(Colorate.Vertical(Colors.purple_to_red, Center.Center(f'\n{banner}\n')))
 
 def idcrypter():
     global color_shade
@@ -115,6 +122,8 @@ def idcrypter():
         print(Colorate.Vertical(Colors.purple_to_blue, Center.XCenter(f'\n{banner}\n')))
     elif color_shade == 'yellow_to_green':
         print(Colorate.Vertical(Colors.yellow_to_green, Center.XCenter(f'\n{banner}\n')))
+    elif color_shade == 'purple_to_red':
+        print(Colorate.Vertical(Colors.purple_to_red, Center.XCenter(f'\n{banner}\n')))
 
 def enc_options():
     global color
@@ -150,6 +159,17 @@ def enc_options():
 \n    {Colors.light_green}[{Colors.light_gray}16{Colors.light_green}] {Colors.white}Triple DES                            {Colors.light_green}[{Colors.light_gray}17{Colors.light_green}] {Colors.white}TwoFish                               {Colors.light_green}[{Colors.light_gray}18{Colors.light_green}] {Colors.white}Blowfish
 \n    {Colors.light_green}[{Colors.light_gray}19{Colors.light_green}] {Colors.white}CAST5                                 {Colors.light_green}[{Colors.light_gray}20{Colors.light_green}] {Colors.white}CAST6                                 {Colors.light_green}[{Colors.light_gray}21{Colors.light_green}] {Colors.white}GOST
 \n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                         {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página                       {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
+\n"""))
+    elif color == 'light_red':
+        print(Center.XCenter(f"""
+    {Colors.light_red}[{Colors.light_gray}01{Colors.light_red}] {Colors.white}Binario                               {Colors.light_red}[{Colors.light_gray}02{Colors.light_red}] {Colors.white}Hexadecimal                           {Colors.light_red}[{Colors.light_gray}03{Colors.light_red}] {Colors.white}Cifrado URL
+\n    {Colors.light_red}[{Colors.light_gray}04{Colors.light_red}] {Colors.white}Texto al revés                        {Colors.light_red}[{Colors.light_gray}05{Colors.light_red}] {Colors.white}Base 64                               {Colors.light_red}[{Colors.light_gray}06{Colors.light_red}] {Colors.white}Cifrado César
+\n    {Colors.light_red}[{Colors.light_gray}07{Colors.light_red}] {Colors.white}Entidades HTML                        {Colors.light_red}[{Colors.light_gray}08{Colors.light_red}] {Colors.white}Cifrado ROT-13                        {Colors.light_red}[{Colors.light_gray}09{Colors.light_red}] {Colors.white}l33t 5p34k
+\n    {Colors.light_red}[{Colors.light_gray}10{Colors.light_red}] {Colors.white}Pig Latin                             {Colors.light_red}[{Colors.light_gray}11{Colors.light_red}] {Colors.white}AES                                   {Colors.light_red}[{Colors.light_gray}12{Colors.light_red}] {Colors.white}DES
+\n    {Colors.light_red}[{Colors.light_gray}13{Colors.light_red}] {Colors.white}Rijndael 192                          {Colors.light_red}[{Colors.light_gray}14{Colors.light_red}] {Colors.white}Rijndael 256                          {Colors.light_red}[{Colors.light_gray}15{Colors.light_red}] {Colors.white}Serpent
+\n    {Colors.light_red}[{Colors.light_gray}16{Colors.light_red}] {Colors.white}Triple DES                            {Colors.light_red}[{Colors.light_gray}17{Colors.light_red}] {Colors.white}TwoFish                               {Colors.light_red}[{Colors.light_gray}18{Colors.light_red}] {Colors.white}Blowfish
+\n    {Colors.light_red}[{Colors.light_gray}19{Colors.light_red}] {Colors.white}CAST5                                 {Colors.light_red}[{Colors.light_gray}20{Colors.light_red}] {Colors.white}CAST6                                 {Colors.light_red}[{Colors.light_gray}21{Colors.light_red}] {Colors.white}GOST
+\n    {Colors.light_red}[{Colors.light_gray}0{Colors.light_red}]  {Colors.light_gray}Configuración                         {Colors.light_red}[{Colors.light_gray}<{Colors.light_red}]  {Colors.light_gray}Anterior Página                       {Colors.light_red}[{Colors.light_gray}>{Colors.light_red}]  {Colors.light_gray}Siguiente Página
 \n"""))
 
 
@@ -188,13 +208,24 @@ def enc_options2():
 \n
 \n    {Colors.light_green}[{Colors.light_gray}0{Colors.light_green}]  {Colors.light_gray}Configuración                         {Colors.light_green}[{Colors.light_gray}<{Colors.light_green}]  {Colors.light_gray}Anterior Página                       {Colors.light_green}[{Colors.light_gray}>{Colors.light_green}]  {Colors.light_gray}Siguiente Página
 \n"""))
+    elif color == 'light_red':
+        print(Center.XCenter(f"""
+    {Colors.light_red}[{Colors.light_gray}22{Colors.light_red}] {Colors.white}Loki97                                {Colors.light_red}[{Colors.light_gray}23{Colors.light_red}] {Colors.white}Safer+                                {Colors.light_red}[{Colors.light_gray}24{Colors.light_red}] {Colors.white}XTEA
+\n    {Colors.light_red}[{Colors.light_gray}25{Colors.light_red}] {Colors.white}Encriptación total
+\n
+\n
+\n
+\n
+\n
+\n    {Colors.light_red}[{Colors.light_gray}0{Colors.light_red}]  {Colors.light_gray}Configuración                         {Colors.light_red}[{Colors.light_gray}<{Colors.light_red}]  {Colors.light_gray}Anterior Página                       {Colors.light_red}[{Colors.light_gray}>{Colors.light_red}]  {Colors.light_gray}Siguiente Página
+\n"""))
 
 
 def config_options():
     global color
     if color == 'yellow':
         print(Center.XCenter(f"""
-    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                       {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Resolución                            {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
+    {Colors.yellow}[{Colors.light_gray}1{Colors.yellow}]  {Colors.white}Cambiar el tema                       {Colors.yellow}[{Colors.light_gray}2{Colors.yellow}]  {Colors.white}Resolución (bug)                      {Colors.yellow}[{Colors.light_gray}3{Colors.yellow}]  {Colors.white}Salir
 \n
 \n
 \n
@@ -205,7 +236,7 @@ def config_options():
 \n"""))
     elif color == 'purple':
         print(Center.XCenter(f"""
-    {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                       {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Resolución                            {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
+    {Colors.purple}[{Colors.light_gray}1{Colors.purple}]  {Colors.white}Cambiar el tema                       {Colors.purple}[{Colors.light_gray}2{Colors.purple}]  {Colors.white}Resolución (bug)                            {Colors.purple}[{Colors.light_gray}3{Colors.purple}]  {Colors.white}Salir
 \n
 \n
 \n
@@ -216,7 +247,18 @@ def config_options():
 \n"""))
     elif color == 'light_green':
         print(Center.XCenter(f"""
-    {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                       {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Resolución                            {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
+    {Colors.light_green}[{Colors.light_gray}1{Colors.light_green}]  {Colors.white}Cambiar el tema                       {Colors.light_green}[{Colors.light_gray}2{Colors.light_green}]  {Colors.white}Resolución (bug)                            {Colors.light_green}[{Colors.light_gray}3{Colors.light_green}]  {Colors.white}Salir
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n"""))
+    elif color == 'light_red':
+        print(Center.XCenter(f"""
+    {Colors.light_red}[{Colors.light_gray}1{Colors.light_red}]  {Colors.white}Cambiar el tema                       {Colors.light_red}[{Colors.light_gray}2{Colors.light_red}]  {Colors.white}Resolución (bug)                            {Colors.light_red}[{Colors.light_gray}3{Colors.light_red}]  {Colors.white}Salir
 \n
 \n
 \n
@@ -242,7 +284,7 @@ def config_main():
             '              [3] Nature', Colors.light_green, interval=0.01)
         print()
         Write.Print(
-            '              [4] Blood', Colors.light_red, interval=0.01)
+            '              [4] Chaos', Colors.light_red, interval=0.01)
         print('\n')
         eleccion()
         if number == 0:
